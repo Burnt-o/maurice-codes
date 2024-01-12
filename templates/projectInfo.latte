@@ -1,0 +1,12 @@
+{parameters $title, $tags, $copy, $link}
+
+<div class="projectInfo">
+        <h1>{$title}</h1>
+        <p>
+            {foreach $tags as $tag}
+                {$tag}
+            {/foreach} 
+        </p>
+        <p>{$copy}</p>
+        <a href='{$link}'>{$link}</a>
+</div>

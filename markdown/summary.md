@@ -1,4 +1,3 @@
-** Hello **
-* bullet point 1
-* bullet point 2
-* bullet point 3
+**Hi, I’m Maurice.**  
+Currently a part-time Duty Manager at a large Coles retail location, for the last decade I’ve been developing solid foundational software engineering skills via open-source projects with a focus on C++, C#, reverse engineering, desktop application development and whole-project architecture, collaborating with highly active user communities to create user-friendly GUI’s, to manage and investigate issues, and to deliver exciting features and functionality. 
+I’m fascinated not by any particular language or framework, but of developing a philosophy around good, maintainable and readable code. Self-documenting, test-driven, modular and reusable, clear in intent, and specific about object ownership, dependencies and lifetime. Let’s talk code.

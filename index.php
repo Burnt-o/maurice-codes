@@ -16,7 +16,7 @@
 
             // display content
             require 'stickyHeader.html';
-            require 'summary.php';
+            require 'body.php';
 
         ?>
     </body>
