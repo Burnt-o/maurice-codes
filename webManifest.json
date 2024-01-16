@@ -1,0 +1,32 @@
+{
+    "short_name": "maurice.codes",
+    "name": "Maurice Codes",
+    "icons": [
+      {
+        "src": "assets/images/icon/32x32.png",
+        "sizes": "32x32",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/images/icon/256x256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/images/icon/512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/images/icon/512x512_maskable.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+      }
+
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#140a14",
+    "background_color": "#140a14"
+  }
