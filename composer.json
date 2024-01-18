@@ -1,6 +1,6 @@
 {
     "require": {
         "cebe/markdown": "~1.2.0",
-        "latte/latte": "^3.0"
+        "latte/latte": "2.10.10"
     }
 }
