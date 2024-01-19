@@ -20,17 +20,17 @@ class StringArray implements IteratorAggregate, Countable, ArrayAccess  {
         return count($this->strings);
     }
 
-    public function offsetExists(mixed $offset) : bool 
+    public function offsetExists($offset) : bool 
     {
         return isset($this->strings[$offset]);
     }
 
-    public function offsetGet(mixed $offset) : string 
+    public function offsetGet($offset) : string 
     {
         return $this->strings[$offset];
     }
 
-    public function offsetSet(mixed $offset, mixed $value) : void 
+    public function offsetSet($offset, $value) : void 
     {
         if ($value instanceof string) 
         {
@@ -39,7 +39,7 @@ class StringArray implements IteratorAggregate, Countable, ArrayAccess  {
         else throw new TypeError("Not a string!");
     }
 
-    public function offsetUnset(mixed $offset) : void 
+    public function offsetUnset($offset) : void 
     {
         unset($this -> string[$offset]);
     }
