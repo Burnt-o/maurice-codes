@@ -34,7 +34,7 @@ class StringArray implements IteratorAggregate, Countable, ArrayAccess  {
     {
         if ($value instanceof string) 
         {
-            $this -> Users[$offset] = $value;
+            $this -> strings[$offset] = $value;
         }
         else throw new TypeError("Not a string!");
     }
