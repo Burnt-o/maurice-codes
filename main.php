@@ -26,7 +26,7 @@
             
             foreach ($projectInformationCollection as $project) {
                 $latte = new Latte\Engine;
-                $latte->setTempDirectory('/tempdir'); // cache directory
+                $latte->setTempDirectory('./tempdir'); // cache directory
                 $project->display($latte);
             }
             ?>
