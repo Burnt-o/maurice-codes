@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "103a55e680973dd02937f1965cbd7274",
+    "content-hash": "e72199cdc5f2b5c439ca463456bb6203",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -72,32 +72,31 @@
         },
         {
             "name": "latte/latte",
-            "version": "v3.0.13",
+            "version": "v2.10.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/latte.git",
-                "reference": "462444d669809528b6f6ce191b616d747c9b4bfc"
+                "reference": "52b1646bd7d97e52720be1c29f21a12c0449e84e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/latte/zipball/462444d669809528b6f6ce191b616d747c9b4bfc",
-                "reference": "462444d669809528b6f6ce191b616d747c9b4bfc",
+                "url": "https://api.github.com/repos/nette/latte/zipball/52b1646bd7d97e52720be1c29f21a12c0449e84e",
+                "reference": "52b1646bd7d97e52720be1c29f21a12c0449e84e",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-tokenizer": "*",
-                "php": "8.0 - 8.3"
+                "php": "7.1 - 8.3"
             },
             "conflict": {
-                "nette/application": "<3.1.7",
-                "nette/caching": "<3.1.4"
+                "nette/application": "<2.4.1"
             },
             "require-dev": {
-                "nette/php-generator": "^3.6 || ^4.0",
-                "nette/tester": "^2.0",
+                "nette/php-generator": "^3.3.4",
+                "nette/tester": "~2.0",
                 "nette/utils": "^3.0",
-                "phpstan/phpstan": "^1",
+                "phpstan/phpstan": "^0.12",
                 "tracy/tracy": "^2.3"
             },
             "suggest": {
@@ -113,7 +112,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "2.10-dev"
                 }
             },
             "autoload": {
@@ -151,9 +150,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/latte/issues",
-                "source": "https://github.com/nette/latte/tree/v3.0.13"
+                "source": "https://github.com/nette/latte/tree/v2.10.10"
             },
-            "time": "2024-01-09T13:54:57+00:00"
+            "time": "2023-11-07T13:15:15+00:00"
         }
     ],
     "packages-dev": [],

@@ -1,8 +1,36 @@
 #stickyHeader {
-    background-color: #c0c0c0;
     display: block; /*Force other content down*/
     position:sticky;
     top:0;
     width:100%;
+    margin: 0;
+    padding: 0;
     z-index:100;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        font-family: sans-serif;
+      }
+      
+      li {
+        float: left;
+      }
+      
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      /* Change the link color to white on hover */
+      li a:hover {
+        background-color: #fff;
+      }
+
 }

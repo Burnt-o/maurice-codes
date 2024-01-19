@@ -1,0 +1,42 @@
+.projectInfo
+{
+.title{ 
+    color:var(--title);
+}
+
+@media (max-width: 700px)
+{
+    .tagContainer{
+        /* Horizontally scrolling list of tags*/
+        width: 110%;
+        margin-left: -2%;
+        margin-right: 0%;
+        overflow-x: scroll; 
+        white-space: nowrap;
+        scrollbar-color: red;
+        scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
+}
+
+
+.tagContainer{
+    /* No horizontal scrolling on desktop */
+    .tag{
+        display: inline-block;
+        color:var(--text-disabled);
+        background-color: var(--titleHighlight);
+        scroll-snap-align: start;
+    }
+}
+
+.copy{
+
+}
+
+.link{
+
+}
+
+}

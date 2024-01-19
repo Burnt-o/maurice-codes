@@ -5,13 +5,13 @@ $projectInformationCollection = array();
 array_push($projectInformationCollection, 
     new ProjectInformation(
         "Halo Checkpoint Manager", 
-        new StringArray("C++ & associated best practices", "C#", ".NET", "WPF", "MVVM framework", "DirectX", "WinAPI", "DLL injection & interprocess communication", "Reverse engineering", "Application development & project architecture", "GUI design and architecture", "object lifetime management", "open source development", "real-time application", "automated tests"), 
+        new StringArray("C++", "C#", ".NET", "WPF", "MVVM framework", "DirectX", "WinAPI", "DLL injection", "interprocess communication", "Reverse engineering", "Application development", "project architecture", "GUI architecture", "object lifetime management", "open source development", "real-time application", "automated tests"), 
         file_get_contents('markdown/projects/HCM.md'), 
         "github.com/Burnt-o/HaloCheckpointManager"
     ),
     new ProjectInformation(
         "Halo CE Enemy Randomiser", 
-        new StringArray("C++", "DirectX", "WinAPI", "DLL injection", "Reverse engineering", "Application development & project architecture", "GUI design and architecture", "object lifetime management", "open source development", "real-time application"), 
+        new StringArray("C++", "DirectX", "WinAPI", "DLL injection", "Reverse engineering", "Application development", "project architecture", "GUI architecture", "object lifetime management", "open source development", "real-time application"), 
         file_get_contents('markdown/projects/CEER.md'), 
         "github.com/Burnt-o/CEER"
     ),

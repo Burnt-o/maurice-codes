@@ -3,10 +3,41 @@
 
 
 body {
-	width: 70%; 
-	margin: auto;
+  background-color: var(--windowBackground);
 }
 
+
+.main {
+  text-align: center;
+	width: 30%;  
+  margin: auto;
+  color:var(--title);
+
+  p {
+    text-align: left;
+    font-size: 100%;
+    color: var(--text);
+  }
+
+  h1 {
+    display: inline-block;
+    background-color: var(--color);
+    font-family: "public-pixel", monospace;
+    font-size: 2em;
+    padding: 16px;
+    padding-top: 4px;
+    padding-bottom: 8px;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0.3em;
+  }
+
+}
+
+
+
+
+/*TODO: update these placeholder colours*/
 a:link {
   color: gray;
 }
@@ -21,65 +52,18 @@ a:hover {
 
 a:active {
   color: teal;
-}
-
-#navigation {
+} 
   
-}
-
-p {
-  font-size: 120%;
-  color: dimgray;
-}
-
-#contents {
-	float: right;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  font-family: sans-serif;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color to white on hover */
-li a:hover {
-  background-color: #fff;
-}
-
-/* .main{
-    display: flex;
-    flex-direction: column;
-      position: relative;
-    width: calc(100vw - 1em);
-    width: -webkit-fill-available;
-    width: -moz-available;
-    width: fill-available;
-    max-width: 96em;
-    align-self: center;
-    background: rgb(15, 15, 15);
-    margin: 1em 1em 0.8em 1em;
-    border-radius: 1em;
-    overflow: hidden;
+#anchorLink 
+  {
+    a, a:hover, a:visited, a:active {
+      color: inherit !important;
+      text-decoration: none !important;
+     }
   }
 
-  .header{
-    position:sticky;
-    top: 0;
-    z-index: 999; 
-  } */
+section {
+  padding-bottom: 64px;
+  margin-bottom: 80px;
+  position: relative;
+}
