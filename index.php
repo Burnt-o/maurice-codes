@@ -41,16 +41,22 @@
 </head>
 
 <body>
+
+
   <?php
   require_once 'vendor/autoload.php'; // load composer dependencies
   $parser = new \cebe\markdown\Markdown(); // global markdown parser https://github.com/cebe/markdown
   
+
   
   // display content
   require 'stickyHeader.html';
   require 'main.php';
 
   ?>
+    <div id='log'>Log: </div>
+  <script src="js/intersectionObserver.js"></script>
+
 </body>
 <footer>
   Contact me on dsdddah: <a href="blah@bzzzzzzzzdh.com">@2463334zah</a>
