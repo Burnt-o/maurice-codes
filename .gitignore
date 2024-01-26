@@ -1,3 +1,4 @@
 /vendor/
 /ed/
 composer.lock
+/tempdir/

@@ -1,4 +1,9 @@
 {
+    "config": {
+		"platform": {
+			"php": "7.4.33"
+		}
+	},
     "require": {
         "cebe/markdown": "~1.2.0",
         "latte/latte": "2.10.10"
