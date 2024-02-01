@@ -28,7 +28,7 @@ function callbackFunc(entries, observer)
 let options = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.0
+    threshold: 0.2
   };
 
 let observer = new IntersectionObserver(callbackFunc, options);

@@ -43,7 +43,7 @@
 
 <body>
 <!--toggles is-visible class on animated elements-->
-
+<script src="js/scrollObserver.js"></script> 
   <?php
   require_once 'vendor/autoload.php'; // load composer dependencies
   $parser = new \cebe\markdown\Markdown(); // global markdown parser https://github.com/cebe/markdown
@@ -56,6 +56,7 @@
 
   ?>
 <script src="js/intersectionObserver.js"></script> 
+
 
 </body>
 <footer>

@@ -4,9 +4,10 @@
 include "hero.php";
 ?>
 
+
     <div class="background-image">
 
-        
+
 
         <div id="projects">
             <a id="projectsAnchor">
