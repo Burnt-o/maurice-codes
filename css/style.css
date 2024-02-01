@@ -1,41 +1,61 @@
 
+/* * {
+  outline: 1px solid #f00 !important;
+} */
+
+*{
+  margin: 0px;
+}
 
 
+.background-image{
+  background-image: url("../assets/images/backgrounds/background-vertically-tiling.png");
+
+  background-repeat: repeat-y;
+  background-size: cover;
+  z-index: 2;
+  position:relative;
+  top: 0;
+
+}
 
 body {
   background-color: var(--windowBackground);
+
+
 }
 
 
 .main {
-  text-align: center;
-	width: 30%;  
-  margin: auto;
-  color:var(--title);
 
-  p {
-    text-align: left;
-    font-size: 100%;
-    color: var(--text);
-  }
 
-  h1 {
-    display: inline-block;
-    background-color: var(--color);
-    font-family: "public-pixel", monospace;
-    font-size: 2em;
-    padding: 16px;
-    padding-top: 4px;
-    padding-bottom: 8px;
-    margin: auto;
-    margin-top: 0;
-    margin-bottom: 0.3em;
-  }
+  
+
+
 
 }
 
+.summary
+{
+  padding-top: 10vh;
+  height:50vh;
+
+}
+
+section {
 
 
+  position: relative;
+
+  margin: auto;
+
+}
+
+a{
+  /* content to center of screen*/
+  display: block;
+  text-align: center;
+}
 
 /*TODO: update these placeholder colours*/
 a:link {
@@ -62,11 +82,7 @@ a:active {
      }
   }
 
-section {
-  padding-bottom: 64px;
-  margin-bottom: 80px;
-  position: relative;
-}
+
 
 
 
@@ -74,32 +90,4 @@ section {
 /* inViewport */
 
 
-.is-visible
-{
-  transition: 2s;
-  transform: scale(0.1);
-}
 
-[data-inviewport="scale-in"] { 
-  transition: 2s;
-  transform: scale(0.1);
-}
-[data-inviewport="scale-in"].is-inViewport { 
-  transform: scale(1);
-}
-
-[data-inviewport="fade-rotate"] { 
-  transition: 2s;
-  opacity: 0;
-}
-[data-inviewport="fade-rotate"].is-inViewport { 
-  transform: rotate(180deg);
-  opacity: 1;
-}
-
-#log {
-  color: white;
-  width: 200px;
-  height: 80vh;
-  overflow: auto;
-}

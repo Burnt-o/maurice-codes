@@ -1,10 +1,13 @@
 :root, :root.dark {
-    --windowBackground: #140a14;
+    --windowBackground: #2f3c48;
     --windowBackgroundHighlight: #59171e;
-    --text: #cce6e6;
+    --hero-text: rgb(252, 238, 223);;
+    --text: #f3e7db;
     --text-disabled: #3d4a4a;
+    --hero-title: #d63131; 
     --title: #ffcc66; 
     --titleHighlight: #ff9940;
+    --testingHighlight: #e100ff;
 }
 
 /*TODO: setup a toggle in js https://stackoverflow.com/questions/72411549/how-to-setup-a-simple-color-scheme-via-css-root-variables */

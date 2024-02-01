@@ -1,42 +1,404 @@
-.projectInfo
-{
-.title{ 
-    color:var(--title);
+#projects {
+  overflow-x: hidden;
+  /* .copy{
+
+  }
+
+  .link{
+
+  } */
 }
-
-@media (max-width: 700px)
-{
-    .tagContainer{
-        /* Horizontally scrolling list of tags*/
-        width: 110%;
-        margin-left: -2%;
-        margin-right: 0%;
-        overflow-x: scroll; 
-        white-space: nowrap;
-        scrollbar-color: red;
-        scrollbar-width: thin;
-        -webkit-overflow-scrolling: touch;
-        scroll-snap-type: x mandatory;
-    }
+#projects .projectInfoWrapper {
+  overflow: hidden; /* prevent internal animations expanding the browser window or pushing other stuff around*/
 }
-
-
-.tagContainer{
-    /* No horizontal scrolling on desktop */
-    .tag{
-        display: inline-block;
-        color:var(--text-disabled);
-        background-color: var(--titleHighlight);
-        scroll-snap-align: start;
-    }
+@keyframes expand-from-nothing {
+  from {
+    transform: scaleX(0);
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleX(1);
+    transform: scaleY(1);
+  }
 }
-
-.copy{
-
+#projects p {
+  /* align paragraph to the center of the screen*/
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0.3em;
+  text-align: left;
+  font-size: 120%;
+  text-shadow: black 0 0 10px, black 0 0 5px;
+  color: var(--text);
+  width: 40%;
+  /*increase line spacing slightly*/
+  line-height: 1.2;
 }
-
-.link{
-
+#projects h2 {
+  /* same as above with slightly smaller font */
+  text-align: center;
+  background-color: var(--color);
+  font-family: "public-pixel", monospace;
+  font-size: 3em;
+  padding: 16px;
+  padding-top: 4px;
+  padding-bottom: 8px;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0.3em;
+  color: var(--title);
+  text-shadow: black 0 0 10px, black 0 0 5px;
 }
-
+#projects .tagContainer .tag {
+  display: inline-block;
+  color: var(--text-disabled);
+  background-color: var(--titleHighlight);
+  scroll-snap-align: start;
+  transform: scaleX(0);
+  transform: scaleY(0);
 }
+#projects .tagContainer .tag.has-been-visible {
+  animation-name: expand-from-nothing;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#projects .tagContainer .tag:nth-child(1) {
+  animation-delay: 0.4409810094s;
+}
+#projects .tagContainer .tag:nth-child(2) {
+  animation-delay: 0.609178937s;
+}
+#projects .tagContainer .tag:nth-child(3) {
+  animation-delay: 0.7889333936s;
+}
+#projects .tagContainer .tag:nth-child(4) {
+  animation-delay: 1.1117100878s;
+}
+#projects .tagContainer .tag:nth-child(5) {
+  animation-delay: 0.8934858856s;
+}
+#projects .tagContainer .tag:nth-child(6) {
+  animation-delay: 1.3452617669s;
+}
+#projects .tagContainer .tag:nth-child(7) {
+  animation-delay: 1.3163308802s;
+}
+#projects .tagContainer .tag:nth-child(8) {
+  animation-delay: 1.3502254143s;
+}
+#projects .tagContainer .tag:nth-child(9) {
+  animation-delay: 1.3301975279s;
+}
+#projects .tagContainer .tag:nth-child(10) {
+  animation-delay: 1.3071868755s;
+}
+#projects .tagContainer .tag:nth-child(11) {
+  animation-delay: 1.4032233605s;
+}
+#projects .tagContainer .tag:nth-child(12) {
+  animation-delay: 1.7898907197s;
+}
+#projects .tagContainer .tag:nth-child(13) {
+  animation-delay: 1.7335236503s;
+}
+#projects .tagContainer .tag:nth-child(14) {
+  animation-delay: 1.928755438s;
+}
+#projects .tagContainer .tag:nth-child(15) {
+  animation-delay: 1.9479566111s;
+}
+#projects .tagContainer .tag:nth-child(16) {
+  animation-delay: 2.2493652202s;
+}
+#projects .tagContainer .tag:nth-child(17) {
+  animation-delay: 2.3883435451s;
+}
+#projects .tagContainer .tag:nth-child(18) {
+  animation-delay: 2.4548270032s;
+}
+#projects .tagContainer .tag:nth-child(19) {
+  animation-delay: 2.2039298862s;
+}
+#projects .tagContainer .tag:nth-child(20) {
+  animation-delay: 2.5855412156s;
+}
+#projects .tagContainer .tag:nth-child(21) {
+  animation-delay: 2.8200195217s;
+}
+#projects .tagContainer .tag:nth-child(22) {
+  animation-delay: 2.5531687485s;
+}
+#projects .tagContainer .tag:nth-child(23) {
+  animation-delay: 2.8581071862s;
+}
+#projects .tagContainer .tag:nth-child(24) {
+  animation-delay: 2.8108662093s;
+}
+#projects .tagContainer .tag:nth-child(25) {
+  animation-delay: 2.9145660215s;
+}
+#projects .tagContainer .tag:nth-child(26) {
+  animation-delay: 3.2413937268s;
+}
+#projects .tagContainer .tag:nth-child(27) {
+  animation-delay: 3.0405594356s;
+}
+#projects .tagContainer .tag:nth-child(28) {
+  animation-delay: 3.4714860088s;
+}
+#projects .tagContainer .tag:nth-child(29) {
+  animation-delay: 3.5260952172s;
+}
+#projects .tagContainer .tag:nth-child(30) {
+  animation-delay: 3.5663887652s;
+}
+#projects .tagContainer .tag:nth-child(31) {
+  animation-delay: 3.78154535s;
+}
+#projects .tagContainer .tag:nth-child(32) {
+  animation-delay: 3.5472889411s;
+}
+#projects .tagContainer .tag:nth-child(33) {
+  animation-delay: 3.7226252938s;
+}
+#projects .tagContainer .tag:nth-child(34) {
+  animation-delay: 3.832707115s;
+}
+#projects .tagContainer .tag:nth-child(35) {
+  animation-delay: 4.1059499859s;
+}
+#projects .tagContainer .tag:nth-child(36) {
+  animation-delay: 4.1223677188s;
+}
+#projects .tagContainer .tag:nth-child(37) {
+  animation-delay: 4.3482081139s;
+}
+#projects .tagContainer .tag:nth-child(38) {
+  animation-delay: 4.1682344858s;
+}
+#projects .tagContainer .tag:nth-child(39) {
+  animation-delay: 4.6247969234s;
+}
+#projects .tagContainer .tag:nth-child(40) {
+  animation-delay: 4.4326537024s;
+}
+#projects .tagContainer .tag:nth-child(41) {
+  animation-delay: 4.4057616136s;
+}
+#projects .tagContainer .tag:nth-child(42) {
+  animation-delay: 4.7500208679s;
+}
+#projects .tagContainer .tag:nth-child(43) {
+  animation-delay: 4.9946781969s;
+}
+#projects .tagContainer .tag:nth-child(44) {
+  animation-delay: 4.7752558023s;
+}
+#projects .tagContainer .tag:nth-child(45) {
+  animation-delay: 5.0701616121s;
+}
+#projects .tagContainer .tag:nth-child(46) {
+  animation-delay: 5.1619879524s;
+}
+#projects .tagContainer .tag:nth-child(47) {
+  animation-delay: 5.0602732285s;
+}
+#projects .tagContainer .tag:nth-child(48) {
+  animation-delay: 5.1195670541s;
+}
+#projects .tagContainer .tag:nth-child(49) {
+  animation-delay: 5.574660329s;
+}
+#projects .tagContainer .tag:nth-child(50) {
+  animation-delay: 5.6615829021s;
+}
+#projects .tagContainer .tag:nth-child(51) {
+  animation-delay: 5.4915000533s;
+}
+#projects .tagContainer .tag:nth-child(52) {
+  animation-delay: 5.7550130648s;
+}
+#projects .tagContainer .tag:nth-child(53) {
+  animation-delay: 5.7043797717s;
+}
+#projects .tagContainer .tag:nth-child(54) {
+  animation-delay: 5.9240768544s;
+}
+#projects .tagContainer .tag:nth-child(55) {
+  animation-delay: 6.0982176056s;
+}
+#projects .tagContainer .tag:nth-child(56) {
+  animation-delay: 5.8833979674s;
+}
+#projects .tagContainer .tag:nth-child(57) {
+  animation-delay: 6.1129022391s;
+}
+#projects .tagContainer .tag:nth-child(58) {
+  animation-delay: 6.4372167094s;
+}
+#projects .tagContainer .tag:nth-child(59) {
+  animation-delay: 6.2175887934s;
+}
+#projects .tagContainer .tag:nth-child(60) {
+  animation-delay: 6.2621806023s;
+}
+#projects .tagContainer .tag:nth-child(61) {
+  animation-delay: 6.469201337s;
+}
+#projects .tagContainer .tag:nth-child(62) {
+  animation-delay: 6.5219820613s;
+}
+#projects .tagContainer .tag:nth-child(63) {
+  animation-delay: 6.8172141398s;
+}
+#projects .tagContainer .tag:nth-child(64) {
+  animation-delay: 7.0281251988s;
+}
+#projects .tagContainer .tag:nth-child(65) {
+  animation-delay: 7.2206838897s;
+}
+#projects .tagContainer .tag:nth-child(66) {
+  animation-delay: 6.973338573s;
+}
+#projects .tagContainer .tag:nth-child(67) {
+  animation-delay: 7.3960643476s;
+}
+#projects .tagContainer .tag:nth-child(68) {
+  animation-delay: 7.4688560654s;
+}
+#projects .tagContainer .tag:nth-child(69) {
+  animation-delay: 7.3804064487s;
+}
+#projects .tagContainer .tag:nth-child(70) {
+  animation-delay: 7.5167657155s;
+}
+#projects .tagContainer .tag:nth-child(71) {
+  animation-delay: 7.3741629126s;
+}
+#projects .tagContainer .tag:nth-child(72) {
+  animation-delay: 7.6910045792s;
+}
+#projects .tagContainer .tag:nth-child(73) {
+  animation-delay: 8.0297237843s;
+}
+#projects .tagContainer .tag:nth-child(74) {
+  animation-delay: 7.9462610266s;
+}
+#projects .tagContainer .tag:nth-child(75) {
+  animation-delay: 8.1971600816s;
+}
+#projects .tagContainer .tag:nth-child(76) {
+  animation-delay: 8.0300372779s;
+}
+#projects .tagContainer .tag:nth-child(77) {
+  animation-delay: 7.9552928141s;
+}
+#projects .tagContainer .tag:nth-child(78) {
+  animation-delay: 8.1179743916s;
+}
+#projects .tagContainer .tag:nth-child(79) {
+  animation-delay: 8.2012510247s;
+}
+#projects .tagContainer .tag:nth-child(80) {
+  animation-delay: 8.7329089788s;
+}
+#projects .tagContainer .tag:nth-child(81) {
+  animation-delay: 8.4670804339s;
+}
+#projects .tagContainer .tag:nth-child(82) {
+  animation-delay: 8.8764556324s;
+}
+#projects .tagContainer .tag:nth-child(83) {
+  animation-delay: 8.7249091899s;
+}
+#projects .tagContainer .tag:nth-child(84) {
+  animation-delay: 8.8276957029s;
+}
+#projects .tagContainer .tag:nth-child(85) {
+  animation-delay: 9.1454989168s;
+}
+#projects .tagContainer .tag:nth-child(86) {
+  animation-delay: 9.310287704s;
+}
+#projects .tagContainer .tag:nth-child(87) {
+  animation-delay: 9.3959242972s;
+}
+#projects .tagContainer .tag:nth-child(88) {
+  animation-delay: 9.1692039765s;
+}
+#projects .tagContainer .tag:nth-child(89) {
+  animation-delay: 9.2077774355s;
+}
+#projects .tagContainer .tag:nth-child(90) {
+  animation-delay: 9.2900128536s;
+}
+#projects .tagContainer .tag:nth-child(91) {
+  animation-delay: 9.5273846105s;
+}
+#projects .tagContainer .tag:nth-child(92) {
+  animation-delay: 9.872839685s;
+}
+#projects .tagContainer .tag:nth-child(93) {
+  animation-delay: 9.9875448494s;
+}
+#projects .tagContainer .tag:nth-child(94) {
+  animation-delay: 9.8339454201s;
+}
+#projects .tagContainer .tag:nth-child(95) {
+  animation-delay: 9.8625212364s;
+}
+#projects .tagContainer .tag:nth-child(96) {
+  animation-delay: 9.8772056099s;
+}
+#projects .tagContainer .tag:nth-child(97) {
+  animation-delay: 10.3085677756s;
+}
+#projects .tagContainer .tag:nth-child(98) {
+  animation-delay: 10.2758156716s;
+}
+#projects .tagContainer .tag:nth-child(99) {
+  animation-delay: 10.553270163s;
+}
+#projects .tagContainer .tag:nth-child(100) {
+  animation-delay: 10.5419684323s;
+}
+@keyframes slide-in-from-left {
+  0% {
+    transform: translate(-100%, 0);
+  }
+  80% {
+    transform: translate(2%, 0);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes projectInfo-HCM-animation {
+  from {
+    transform: scaleY(0.1);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+@keyframes hide-off-screen {
+  from {
+    transform: translate(-100%, 0);
+  }
+  to {
+    transform: translate(-100%, 0);
+  }
+}
+#projects .projectInfo {
+  /* should auto expand to fill parent div*/
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+#projects #HCM.has-been-visible {
+  animation: 0.5s ease-in-out slide-in-from-left;
+  transform: translate(0, 0);
+}
+#projects #HCM {
+  transform: translate(-100%, 0);
+}/*# sourceMappingURL=projectInfo.css.map */

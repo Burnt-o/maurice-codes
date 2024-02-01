@@ -1,14 +1,16 @@
-{parameters $title, $tags, $copy, $link}
-
-<div class="projectInfo" data-inviewport="scale-in" id="killme">
-        <h1 class="title">{$title}</h1>
-        <p class="tagContainer">
-            {foreach $tags as $tag}
-                <button class="tag">
-                    {$tag}
-                </button>
-            {/foreach} 
-        </p>
-        <p class="copy">{$copy}</p>
-        <a class="link" href='{$link}'>{$link}</a>
-</div>
+{parameters $id, $title, $tags, $copy, $link}
+<!--to prevent infinitely retriggering the intersection observer, we have an un-animated wrapper for intersection testing-->
+<section class="projectInfoWrapper observe-visibility"> 
+    <div class="projectInfo" id='{$id}'>
+            <h2 class="title">{$title}</h2>
+            <p class="tagContainer">
+                {foreach $tags as $tag}
+                    <button class="tag">
+                        {$tag}
+                    </button>
+                {/foreach} 
+            </p>
+            <p class="copy">{$copy}</p>
+            <a class="link" href='{$link}'>{$link}</a>
+    </div>
+</section>

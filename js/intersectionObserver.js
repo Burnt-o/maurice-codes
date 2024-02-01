@@ -1,36 +1,40 @@
 
+// recursively loop thru elements children and add/remove is-visible class
+function setVisibility(element, value)
+{
+  Array.from(element.children).forEach((e) => {
+  console.log('ok');
+  value ? e.classList.add('is-visible') : e.classList.remove('is-visible');
 
+  if (value)
+  {
+    e.classList.add('has-been-visible'); 
+  } 
+  if (e.children.length > 0) 
+  {
+    setVisibility(e, value);
+  }
+  });
+}
+
+// observer callback
 function callbackFunc(entries, observer)
 {
   entries.forEach(entry => {
-
-    if (entry.isIntersecting)
-    {
-      // animate
-      entry.target.classList.toggle("is-inViewport")
-      //entry.target.classList.add('is-visible');
-      //observer.unobserve(entry.target)
-    }
-
-    var txt = entry.target.id + " visibility: " + entry.isIntersecting;
-    document.getElementById('log').appendChild(document.createTextNode(txt));
-    document.getElementById('log').appendChild(document.createElement("br"));
-
-
+    setVisibility(entry.target, entry.isIntersecting);
   });
 }
 
 let options = {
     root: null,
     rootMargin: '0px',
-    threshold: 0.3
+    threshold: 0.0
   };
 
 let observer = new IntersectionObserver(callbackFunc, options);
 
-
-
-   document.querySelectorAll('.projectInfo').forEach(el => {
+// observe all elements with the observe-visibility class
+   document.querySelectorAll('.observe-visibility').forEach(el => {
     observer.observe(el);
    });
 

@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -33,15 +34,15 @@
   <?php $keywords = "maurice, burnt, burntkurisu, programmer, portfolio, project, cpp, adelaide," ?>
   <meta name="keywords" content="<?php echo $keywords; ?>">
   
-  <!--TODO: setup SASS so everything gets compiled into one css file-->
   <link rel="stylesheet" href="css/colorPalette.css" type="text/css">
+  <link rel="stylesheet" href="css/hero.css" type="text/css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
   <link rel="stylesheet" href="css/stickyHeader.css" type="text/css">
   <link rel="stylesheet" href="css/projectInfo.css" type="text/css">
 </head>
 
 <body>
-
+<!--toggles is-visible class on animated elements-->
 
   <?php
   require_once 'vendor/autoload.php'; // load composer dependencies
@@ -54,8 +55,7 @@
   require 'main.php';
 
   ?>
-    <div id='log'>Log: </div>
-  <script src="js/intersectionObserver.js"></script>
+<script src="js/intersectionObserver.js"></script> 
 
 </body>
 <footer>

@@ -1,0 +1,100 @@
+
+.hero
+{
+
+
+
+
+
+.background-hero {
+    background-image: url("../assets/images/backgrounds/hero-image-background-1300.png");
+    background-repeat: no-repeat, no-repeat;
+    height: 100%;
+    width: 100%;
+    margin:auto;
+    overflow-x:hidden;
+    position:absolute;
+    background-position: top;
+    z-index: 1;
+    background-size: cover;
+
+  }
+
+  .background-hero-foreground {
+    position: absolute;
+    background-image: url("../assets/images/backgrounds/hero-image-foreground-1300.png");
+    width:100%; 
+    height:100%; 
+     overflow-x:hidden;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover;
+    background-position: top;
+    z-index: 3;
+
+  } 
+  
+  .hero-text-top-wrapper {
+    position: fixed;
+    z-index: 2;
+    top: 20vh;
+    margin:auto;
+    width: 100%;
+  }
+
+  .hero-text-top {
+    text-align: center;
+    background-color: var(--color);
+    font-family: "Lucida Console", monospace;
+    font-size: 700%;
+    padding: 16px;
+    padding-top: 4px;
+    padding-bottom: 8px;
+    overflow-x:hidden;
+    color:var(--hero-title);
+    z-index: 2;
+    text-shadow: #000000 0px 0px 20px, #000000 0px 0px 10px;
+  }
+  
+
+
+
+.hero-text-paragraph-wrapper
+{
+  margin: auto;
+  width: 50%;  
+}
+
+.hero-text-paragraph
+{
+  
+
+  text-align: center;
+
+  width: 50%;  
+  background-color: var(--color);
+  font-family: "public-pixel", monospace;
+  font-size: 150%;
+  color:var(--hero-text);
+  top: 60vh;
+  position:absolute;
+  z-index: 5;
+  text-shadow: #000000 0 0 5px, #000000 0 0 5px;
+  
+margin:auto;
+}
+
+}
+
+
+  /* empty div so content after hero gets pushed down */
+  .hero-spacer
+  {
+    height:95vh;
+  }
+
+  /* TODO: 
+  https://www.w3schools.com/cssref/css3_pr_background.php
+  https://blog.logrocket.com/css-full-page-background/
+  https://css-tricks.com/perfect-full-page-background-image/
+  https://www.freecodecamp.org/news/css-background-image-with-html-example-code/
+  */

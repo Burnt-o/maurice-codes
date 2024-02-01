@@ -1,0 +1,156 @@
+
+#projects{
+  overflow-x:hidden;
+
+$section-intro-duration: 0.5s;
+
+.projectInfoWrapper
+{
+  overflow:hidden; /* prevent internal animations expanding the browser window or pushing other stuff around*/
+}
+
+@keyframes expand-from-nothing
+{
+  from {
+    transform: scaleX(0);
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleX(1);
+    transform: scaleY(1);
+  }
+}
+
+p {
+  /* align paragraph to the center of the screen*/
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0.3em;
+
+  text-align: left;
+  font-size: 120%;
+  text-shadow: black 0 0 10px, black 0 0 5px;
+  color: var(--text);
+  width: 40%;  
+
+  /*increase line spacing slightly*/
+  line-height: 1.20;
+
+}
+
+
+
+h2 {
+  /* same as above with slightly smaller font */ 
+  text-align: center;
+  background-color: var(--color);
+  font-family: "public-pixel", monospace;
+  font-size: 3em;
+  padding: 16px;
+  padding-top: 4px;
+  padding-bottom: 8px;
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0.3em;
+  color:var(--title);
+  text-shadow: black 0 0 10px, black 0 0 5px;
+}
+
+.tagContainer{
+
+    .tag{
+        display: inline-block;
+        color:var(--text-disabled);
+        background-color: var(--titleHighlight);
+        scroll-snap-align: start;
+        transform: scaleX(0);
+        transform: scaleY(0);
+    }
+
+    .tag.has-been-visible
+    {
+      animation-name: expand-from-nothing;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    @for $i from 1 through 100 {
+      .tag:nth-child(#{$i})
+      {
+        $delay: ($section-intro-duration * 0.5) + ($i * 0.1 ) + (0.5 * random());
+        animation-delay: #{$delay};
+      }
+    }
+
+}
+
+/* .copy{
+
+}
+
+.link{
+
+} */
+
+
+
+@keyframes slide-in-from-left
+{
+  0% {
+    transform: translate(-100%, 0);
+  }
+
+  80%
+  {
+    transform: translate(+2%, 0);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes projectInfo-HCM-animation {
+    from {
+      transform: scaleY(0.1);
+    }
+    to {
+      transform: scaleY(1);
+    }
+  }
+
+
+@keyframes  hide-off-screen
+{
+  from {
+    transform: translate(-100%, 0);
+  }
+
+  to {
+    transform: translate(-100%, 0);
+  }
+}
+
+
+.projectInfo{
+  /* should auto expand to fill parent div*/
+padding-top: 10vh;
+padding-bottom: 10vh;
+
+}
+
+
+#HCM.has-been-visible{
+  animation: $section-intro-duration ease-in-out slide-in-from-left ;
+  transform: translate(0, 0);
+  }
+
+
+  
+#HCM{
+  transform: translate(-100%, 0);
+  }
+
+
+}
