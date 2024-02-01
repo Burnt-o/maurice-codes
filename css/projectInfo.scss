@@ -111,26 +111,22 @@ h2 {
   }
 }
 
-@keyframes projectInfo-HCM-animation {
-    from {
-      transform: scaleY(0.1);
-    }
-    to {
-      transform: scaleY(1);
-    }
-  }
-
-
-@keyframes  hide-off-screen
+@keyframes slide-in-from-right
 {
-  from {
-    transform: translate(-100%, 0);
+  0% {
+    transform: translate(100%, 0);
   }
 
-  to {
-    transform: translate(-100%, 0);
+  80%
+  {
+    transform: translate(-2%, 0);
+  }
+
+  100% {
+    transform: translate(0);
   }
 }
+
 
 
 .projectInfo{
@@ -141,15 +137,25 @@ padding-bottom: 10vh;
 }
 
 
-#HCM.has-been-visible{
+/* alternate slide-in-from-left and slide-in-from-right for each project. Hide off screen when not visible. */
+#HCM.has-been-visible, #com.has-been-visible{
   animation: $section-intro-duration ease-in-out slide-in-from-left ;
   transform: translate(0, 0);
   }
 
 
-  
-#HCM{
+#HCM, #com{
   transform: translate(-100%, 0);
+  }
+
+#CEER.has-been-visible, #autosplitter.has-been-visible{
+  animation: $section-intro-duration ease-in-out slide-in-from-right ;
+  transform: translate(0, 0);
+  }
+
+
+#CEER, #autosplitter{
+  transform: translate(100%, 0);
   }
 
 

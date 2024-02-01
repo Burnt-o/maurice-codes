@@ -35,6 +35,6 @@ When the user scrolls down, the title text will move down too and disappear behi
 
 
 <div id = "hero-spacer"></div>
-<img id="hero-transition" src="assets/images/backgrounds/hero-transition.png"></img>
+<img id="hero-transition" src="assets/images/backgrounds/hero-transition-3.png"></img>
 
 
