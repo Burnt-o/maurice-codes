@@ -4,10 +4,13 @@
     --hero-text: rgb(252, 238, 223);;
     --text: #f3e7db;
     --text-disabled: #3d4a4a;
-    --hero-title: #d63131; 
+    --hero-title: #a01414; 
+    --hero-title-highlight: #ff4b4b; 
     --title: #ffcc66; 
     --titleHighlight: #ff9940;
     --testingHighlight: #e100ff;
+    --outside-color: rgba(23, 35, 53, 0.8);
+    --inside-color: rgba(61, 72, 96, 0.6);
 }
 
 /*TODO: setup a toggle in js https://stackoverflow.com/questions/72411549/how-to-setup-a-simple-color-scheme-via-css-root-variables */

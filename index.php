@@ -39,6 +39,7 @@
   <link rel="stylesheet" href="css/style.css" type="text/css">
   <link rel="stylesheet" href="css/stickyHeader.css" type="text/css">
   <link rel="stylesheet" href="css/projectInfo.css" type="text/css">
+  <link rel="stylesheet" href="css/contact.css" type="text/css">
 </head>
 
 <body>
@@ -56,11 +57,15 @@
 
   ?>
 <script src="js/intersectionObserver.js"></script> 
-
+<div id="background-image">
+        </div>
 
 </body>
 <footer>
-  Contact me on dsdddah: <a href="blah@bzzzzzzzzdh.com">@2463334zah</a>
+  <?php
+
+  ?>
+ 
 </footer>
 
 </html>
