@@ -36,6 +36,12 @@ p {
   /*increase line spacing slightly*/
   line-height: 1.20;
 
+
+  @media (orientation: portrait) {
+    width: 80%;
+    font-size: 4vw;
+  }
+
 }
 
 
@@ -84,14 +90,6 @@ h2 {
     }
 
 }
-
-/* .copy{
-
-}
-
-.link{
-
-} */
 
 
 

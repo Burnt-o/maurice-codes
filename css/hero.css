@@ -41,7 +41,7 @@
     text-align: center;
     background-color: var(--color);
     font-family: "Lucida Console", monospace;
-    font-size: 700%;
+    font-size: 8.5vh;
     padding: 16px;
     padding-top: 4px;
     padding-bottom: 8px;
@@ -69,8 +69,8 @@
   #background-hero-foreground {
     position: absolute;
     background-image: url("../assets/images/backgrounds/hero-image-foreground-1300-adjusted.png");
-    width:100%; 
-    height:100%; 
+    height: 100%;
+    width: 100%;
      overflow-x:hidden;
     background-repeat: no-repeat, no-repeat;
     background-size: cover;
@@ -127,13 +127,20 @@
 #hero-paragraph-text-wrapper
 {
   margin: auto;
+
   width: 50%;  
+  @media (orientation: portrait) {
+    width: 80%;
+  }
 
   p{
     
   text-align: center;
 
   width: 50%;  
+
+
+
   background-color: var(--color);
   font-family: "public-pixel", monospace;
   font-size: 150%;
@@ -142,8 +149,14 @@
   position:absolute;
   z-index: 5;
   text-shadow: #000000 0 0 5px, #000000 0 0 5px;
-  
 margin:auto;
+
+@media (orientation: portrait) {
+  width: 80%;
+  top: 50vh;
+  font-size: 4vw;
+}
+
   }
 
   
@@ -158,16 +171,25 @@ margin:auto;
 #hero-spacer
 {
   height:97vh;
-  
+
 }
 
 
-#hero-transition{
-  position:absolute;
+
+#hero-transition-wrapper{
+  position: absolute;
+  top: -1vh;
   z-index: 1000;
-  height: auto;
-  top: 100vh;
+  height: 3vh;
+  @media (orientation: portrait) {
+    height: 2vh;
+  }
+}
+
+#hero-transition{
   width: 100%;
+  height: 100%;
+  margin: auto;
 }
 
 

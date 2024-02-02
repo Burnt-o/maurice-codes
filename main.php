@@ -7,7 +7,9 @@ include "hero.php";
 
     <div class="background-image">
 
-
+    <div id="hero-transition-wrapper">
+        <img id="hero-transition" src="assets/images/backgrounds/hero-transition-3.png"></img>
+    </div>
 
         <div id="projects">
             <a id="projectsAnchor">
