@@ -1,4 +1,9 @@
 
+$shadow-x-distance: 60px;
+$shadow-y-distance: 40px;
+$shadow-blur: 10px;
+$shadow-color: #000000;
+
 #projects{
   overflow-x:hidden;
 
@@ -29,7 +34,7 @@ p {
 
   text-align: left;
   font-size: 120%;
-  text-shadow: black 0 0 10px, black 0 0 5px;
+  text-shadow: black 0 0 10px, black 0 0 5px, $shadow-color $shadow-x-distance $shadow-y-distance $shadow-blur;
   color: var(--text);
   width: 40%;  
 
@@ -59,7 +64,9 @@ h2 {
   margin-top: 0;
   margin-bottom: 0.3em;
   color:var(--title);
-  text-shadow: black 0 0 10px, black 0 0 5px;
+  text-shadow: black 0 0 10px, black 0 0 5px, $shadow-color $shadow-x-distance $shadow-y-distance calc($shadow-blur + 5px);
+
+
 }
 
 .tagContainer{
@@ -71,6 +78,7 @@ h2 {
         scroll-snap-align: start;
         transform: scaleX(0);
         transform: scaleY(0);
+        box-shadow: rgba(0, 0, 0, 0.25) $shadow-x-distance $shadow-y-distance $shadow-blur;
     }
 
     .tag.has-been-visible
