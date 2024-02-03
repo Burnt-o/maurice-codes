@@ -31,7 +31,7 @@ $section-intro-duration: 0.5s;
   }
 }
 
-@keyframes animate-bevel-outter {
+@keyframes animate-bevel-border {
 
   0% {
     background-color: rgb(0, 59, 93); // when pulse gone but it's about to come back
@@ -64,7 +64,6 @@ $section-intro-duration: 0.5s;
 }
 
 .beveled-background-container{
-  z-index: 100;
   padding: 3vh 1vw 12vh 1vw;
   height: 100%;
   width: 100%;
