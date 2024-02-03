@@ -33,28 +33,22 @@ $section-intro-duration: 0.5s;
 
 @keyframes animate-bevel-border {
 
-  0% {
-    background-color: rgb(0, 59, 93); // when pulse gone but it's about to come back
+  0%{
+    background-position: -150vw 0;
   }
-  10% {
-    background-color: linear-gradient(to left, rgb(129, 209, 255), rgb(0, 59, 93));
-  }
-
-  35% {
-    background-color: rgb(129, 209, 255);
+  
+  33%{
+    background-position: -100vw 0;
   }
 
-  55% {
-    background-color: linear-gradient(to right, rgb(129, 209, 255), rgb(0, 59, 93));
+  66%{
+    background-position: 50vw 0;
   }
 
-  80% {
-    background-color: rgb(7, 90, 138); // when pulse gone but it's about to come back
+  100%{
+    background-position: 150vw 0;
   }
 
-  100% {
-    background-color: rgb(0, 59, 93); // when pulse gone but it's about to come back
-  }
 
 }
 
@@ -77,7 +71,9 @@ $section-intro-duration: 0.5s;
 }
 
 .beveled-background-border{
-  background: rgb(0, 162, 255);
+  //background-color: rgb(0, 162, 255);
+  background: linear-gradient(90deg,rgb(0, 59, 93) 0%, rgb(129, 209, 255) 50%, rgb(0, 59, 93) 100%);
+  background-size: 300vw 100%;
   width: $desktop-project-width;
   margin:auto;
   padding: 2px 2px 2px 2px; // controls border thickness
@@ -85,7 +81,7 @@ $section-intro-duration: 0.5s;
   // animate a cool glowing pulse effect in sync with the background lights
   animation-name: animate-bevel-border;
   animation-duration: 4s;
-  animation-delay: 0.3s;
+  animation-delay: 1.5s;
   animation-fill-mode:forwards;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -95,57 +91,73 @@ $section-intro-duration: 0.5s;
 
 .beveled-background-inner{
   background: radial-gradient(circle, rgba(1,0,10,$bevel-background-alpha) 0%, rgba(26,26,41,$bevel-background-alpha) 44%, rgba(13,26,28,$bevel-background-alpha) 100%);
+
 }
 
 
+.projectInfo{
+  /* should auto expand to fill parent div*/
+padding: 1vh 5vw 5vh 5vw;
 
 
-p {
-  /* align paragraph to the center of the screen*/
-  margin: auto;
-  margin-top: 0;
-  margin-bottom: 0.3em;
-  width: 100%;
-  text-align: left;
-  font-size: 120%;
-  text-shadow: black 0 0 10px, black 0 0 5px;//, $shadow-color $shadow-x-distance $shadow-y-distance $shadow-blur;
-  color: var(--text);
 
-  /*increase line spacing slightly*/
-  line-height: 1.20;
 
-  font-family: Tahoma, Verdana, Segoe, sans-serif;
-  @media (orientation: portrait) {
-    font-size: 4vw;
+  h2 {
+    /* same as above with slightly smaller font */ 
+    text-align: center;
+    background-color: var(--color);
+    font-family: "public-pixel", monospace;
+    font-size: 3em;
+    padding: 16px;
+    padding-top: 40px;
+    padding-bottom: 0px;
+    margin: auto;
+    color:var(--title);
+    text-shadow: black 0 0 10px, black 0 0 5px;//, $shadow-color $shadow-x-distance $shadow-y-distance calc($shadow-blur + 5px);
   }
 
+    
+  p {
+    /* align paragraph to the center of the screen*/
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0.3em;
+    margin: auto;
+    width: 80%;
+    text-align: left;
+    font-size: 120%;
+    text-shadow: black 0 0 10px, black 0 0 5px;//, $shadow-color $shadow-x-distance $shadow-y-distance $shadow-blur;
+    color: var(--text);
+
+    /*increase line spacing slightly*/
+    line-height: 1.20;
+
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    @media (orientation: portrait) {
+      font-size: 4vw;
+    }
+
+  }
+
+
 }
 
 
 
-h2 {
-  /* same as above with slightly smaller font */ 
-  text-align: center;
-  background-color: var(--color);
-  font-family: "public-pixel", monospace;
-  font-size: 3em;
-  padding: 16px;
-  padding-top: 40px;
-  padding-bottom: 8px;
-  margin: auto;
-  margin-top: 0;
-  margin-bottom: 0.3em;
-  color:var(--title);
-  text-shadow: black 0 0 10px, black 0 0 5px;//, $shadow-color $shadow-x-distance $shadow-y-distance calc($shadow-blur + 5px);
 
 
-}
+
+
 
 
 
 
 .tagContainer{
-
+  padding-bottom: 1vh;
+  width: 100%;
+  padding-left: 2vw; // TODO: need a better way to "justify" the tags
+  padding-top: 1vh;
+  margin:auto;
     .tag{
        padding: 2px 2px 2px 2px;
        margin: 2px 1px 2px 1px;
@@ -218,11 +230,7 @@ h2 {
 
 
 
-.projectInfo{
-  /* should auto expand to fill parent div*/
-padding: 1vh 5vw 5vh 5vw;
 
-}
 
 
 /* alternate slide-in-from-left and slide-in-from-right for each project. Hide off screen when not visible. */

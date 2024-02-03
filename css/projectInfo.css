@@ -18,22 +18,16 @@
 }
 @keyframes animate-bevel-border {
   0% {
-    background-color: rgb(0, 59, 93);
+    background-position: -150vw 0;
   }
-  10% {
-    background-color: linear-gradient(to left, rgb(129, 209, 255), rgb(0, 59, 93));
+  33% {
+    background-position: -100vw 0;
   }
-  35% {
-    background-color: rgb(129, 209, 255);
-  }
-  55% {
-    background-color: linear-gradient(to right, rgb(129, 209, 255), rgb(0, 59, 93));
-  }
-  80% {
-    background-color: rgb(7, 90, 138);
+  66% {
+    background-position: 50vw 0;
   }
   100% {
-    background-color: rgb(0, 59, 93);
+    background-position: 150vw 0;
   }
 }
 #projects #HCM {
@@ -50,13 +44,14 @@
           clip-path: polygon(90% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
 }
 #projects .beveled-background-border {
-  background: rgb(0, 162, 255);
+  background: linear-gradient(90deg, rgb(0, 59, 93) 0%, rgb(129, 209, 255) 50%, rgb(0, 59, 93) 100%);
+  background-size: 300vw 100%;
   width: 60%;
   margin: auto;
   padding: 2px 2px 2px 2px;
   animation-name: animate-bevel-border;
   animation-duration: 4s;
-  animation-delay: 0.3s;
+  animation-delay: 1.5s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -64,12 +59,30 @@
 #projects .beveled-background-inner {
   background: radial-gradient(circle, rgb(1, 0, 10) 0%, rgb(26, 26, 41) 44%, rgb(13, 26, 28) 100%);
 }
-#projects p {
+#projects .projectInfo {
+  /* should auto expand to fill parent div*/
+  padding: 1vh 5vw 5vh 5vw;
+}
+#projects .projectInfo h2 {
+  /* same as above with slightly smaller font */
+  text-align: center;
+  background-color: var(--color);
+  font-family: "public-pixel", monospace;
+  font-size: 3em;
+  padding: 16px;
+  padding-top: 40px;
+  padding-bottom: 0px;
+  margin: auto;
+  color: var(--title);
+  text-shadow: black 0 0 10px, black 0 0 5px;
+}
+#projects .projectInfo p {
   /* align paragraph to the center of the screen*/
   margin: auto;
   margin-top: 0;
   margin-bottom: 0.3em;
-  width: 100%;
+  margin: auto;
+  width: 80%;
   text-align: left;
   font-size: 120%;
   text-shadow: black 0 0 10px, black 0 0 5px;
@@ -79,24 +92,16 @@
   font-family: Tahoma, Verdana, Segoe, sans-serif;
 }
 @media (orientation: portrait) {
-  #projects p {
+  #projects .projectInfo p {
     font-size: 4vw;
   }
 }
-#projects h2 {
-  /* same as above with slightly smaller font */
-  text-align: center;
-  background-color: var(--color);
-  font-family: "public-pixel", monospace;
-  font-size: 3em;
-  padding: 16px;
-  padding-top: 40px;
-  padding-bottom: 8px;
+#projects .tagContainer {
+  padding-bottom: 1vh;
+  width: 100%;
+  padding-left: 2vw;
+  padding-top: 1vh;
   margin: auto;
-  margin-top: 0;
-  margin-bottom: 0.3em;
-  color: var(--title);
-  text-shadow: black 0 0 10px, black 0 0 5px;
 }
 #projects .tagContainer .tag {
   padding: 2px 2px 2px 2px;
@@ -121,304 +126,304 @@
   animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 #projects .tagContainer .tag:nth-child(1) {
-  animation-delay: 0.4819627393s;
+  animation-delay: 0.500753299s;
 }
 #projects .tagContainer .tag:nth-child(2) {
-  animation-delay: 0.4883433057s;
+  animation-delay: 0.8914091709s;
 }
 #projects .tagContainer .tag:nth-child(3) {
-  animation-delay: 1.0478167405s;
+  animation-delay: 0.9046594394s;
 }
 #projects .tagContainer .tag:nth-child(4) {
-  animation-delay: 1.0230233124s;
+  animation-delay: 0.8441186569s;
 }
 #projects .tagContainer .tag:nth-child(5) {
-  animation-delay: 1.1231817339s;
+  animation-delay: 1.0794008232s;
 }
 #projects .tagContainer .tag:nth-child(6) {
-  animation-delay: 1.0014551297s;
+  animation-delay: 0.9255007534s;
 }
 #projects .tagContainer .tag:nth-child(7) {
-  animation-delay: 1.1628264795s;
+  animation-delay: 0.9554103839s;
 }
 #projects .tagContainer .tag:nth-child(8) {
-  animation-delay: 1.0801355945s;
+  animation-delay: 1.071937794s;
 }
 #projects .tagContainer .tag:nth-child(9) {
-  animation-delay: 1.4279436583s;
+  animation-delay: 1.4995972184s;
 }
 #projects .tagContainer .tag:nth-child(10) {
-  animation-delay: 1.5908339212s;
+  animation-delay: 1.5073780805s;
 }
 #projects .tagContainer .tag:nth-child(11) {
-  animation-delay: 1.7399274909s;
+  animation-delay: 1.5474314397s;
 }
 #projects .tagContainer .tag:nth-child(12) {
-  animation-delay: 1.7222801821s;
+  animation-delay: 1.604671712s;
 }
 #projects .tagContainer .tag:nth-child(13) {
-  animation-delay: 1.9355739119s;
+  animation-delay: 1.7840177208s;
 }
 #projects .tagContainer .tag:nth-child(14) {
-  animation-delay: 1.8206443302s;
+  animation-delay: 2.0824315047s;
 }
 #projects .tagContainer .tag:nth-child(15) {
-  animation-delay: 1.9447111038s;
+  animation-delay: 2.1967668944s;
 }
 #projects .tagContainer .tag:nth-child(16) {
-  animation-delay: 2.0370036682s;
+  animation-delay: 2.0292876263s;
 }
 #projects .tagContainer .tag:nth-child(17) {
-  animation-delay: 2.0416665661s;
+  animation-delay: 2.2917765128s;
 }
 #projects .tagContainer .tag:nth-child(18) {
-  animation-delay: 2.5040866837s;
+  animation-delay: 2.3143340885s;
 }
 #projects .tagContainer .tag:nth-child(19) {
-  animation-delay: 2.3390111666s;
+  animation-delay: 2.5999192017s;
 }
 #projects .tagContainer .tag:nth-child(20) {
-  animation-delay: 2.3737117735s;
+  animation-delay: 2.6081593834s;
 }
 #projects .tagContainer .tag:nth-child(21) {
-  animation-delay: 2.718875495s;
+  animation-delay: 2.5845922391s;
 }
 #projects .tagContainer .tag:nth-child(22) {
-  animation-delay: 2.4790980717s;
+  animation-delay: 2.7139144047s;
 }
 #projects .tagContainer .tag:nth-child(23) {
-  animation-delay: 2.7505160704s;
+  animation-delay: 2.696666732s;
 }
 #projects .tagContainer .tag:nth-child(24) {
-  animation-delay: 2.7037938006s;
+  animation-delay: 2.8921056957s;
 }
 #projects .tagContainer .tag:nth-child(25) {
-  animation-delay: 2.9393210083s;
+  animation-delay: 3.1788868288s;
 }
 #projects .tagContainer .tag:nth-child(26) {
-  animation-delay: 3.24988312s;
+  animation-delay: 3.021499762s;
 }
 #projects .tagContainer .tag:nth-child(27) {
-  animation-delay: 3.3550414806s;
+  animation-delay: 3.2075205268s;
 }
 #projects .tagContainer .tag:nth-child(28) {
-  animation-delay: 3.3266394969s;
+  animation-delay: 3.0684750236s;
 }
 #projects .tagContainer .tag:nth-child(29) {
-  animation-delay: 3.1813170284s;
+  animation-delay: 3.2339859198s;
 }
 #projects .tagContainer .tag:nth-child(30) {
-  animation-delay: 3.3862370198s;
+  animation-delay: 3.2943644644s;
 }
 #projects .tagContainer .tag:nth-child(31) {
-  animation-delay: 3.5323667168s;
+  animation-delay: 3.6206497779s;
 }
 #projects .tagContainer .tag:nth-child(32) {
-  animation-delay: 3.5719246734s;
+  animation-delay: 3.9125425431s;
 }
 #projects .tagContainer .tag:nth-child(33) {
-  animation-delay: 3.7787484468s;
+  animation-delay: 3.5970266795s;
 }
 #projects .tagContainer .tag:nth-child(34) {
-  animation-delay: 3.6669776947s;
+  animation-delay: 3.9300625299s;
 }
 #projects .tagContainer .tag:nth-child(35) {
-  animation-delay: 4.1246736391s;
+  animation-delay: 4.1853548857s;
 }
 #projects .tagContainer .tag:nth-child(36) {
-  animation-delay: 4.336514657s;
+  animation-delay: 4.1419625726s;
 }
 #projects .tagContainer .tag:nth-child(37) {
-  animation-delay: 3.9588624324s;
+  animation-delay: 4.3326041452s;
 }
 #projects .tagContainer .tag:nth-child(38) {
-  animation-delay: 4.0869756196s;
+  animation-delay: 4.5385751567s;
 }
 #projects .tagContainer .tag:nth-child(39) {
-  animation-delay: 4.3423138436s;
+  animation-delay: 4.3151892463s;
 }
 #projects .tagContainer .tag:nth-child(40) {
-  animation-delay: 4.6584201431s;
+  animation-delay: 4.5737618611s;
 }
 #projects .tagContainer .tag:nth-child(41) {
-  animation-delay: 4.5344762717s;
+  animation-delay: 4.4061755045s;
 }
 #projects .tagContainer .tag:nth-child(42) {
-  animation-delay: 4.8060411261s;
+  animation-delay: 4.4797729757s;
 }
 #projects .tagContainer .tag:nth-child(43) {
-  animation-delay: 5.0171220253s;
+  animation-delay: 4.707456119s;
 }
 #projects .tagContainer .tag:nth-child(44) {
-  animation-delay: 4.7833041267s;
+  animation-delay: 4.6939977076s;
 }
 #projects .tagContainer .tag:nth-child(45) {
-  animation-delay: 5.0542153432s;
+  animation-delay: 5.0543980566s;
 }
 #projects .tagContainer .tag:nth-child(46) {
-  animation-delay: 5.1025770019s;
+  animation-delay: 5.2652326277s;
 }
 #projects .tagContainer .tag:nth-child(47) {
-  animation-delay: 5.004962554s;
+  animation-delay: 5.3983577283s;
 }
 #projects .tagContainer .tag:nth-child(48) {
-  animation-delay: 5.1093610598s;
+  animation-delay: 5.5322535611s;
 }
 #projects .tagContainer .tag:nth-child(49) {
-  animation-delay: 5.4664875709s;
+  animation-delay: 5.5488047835s;
 }
 #projects .tagContainer .tag:nth-child(50) {
-  animation-delay: 5.5716060052s;
+  animation-delay: 5.4256977496s;
 }
 #projects .tagContainer .tag:nth-child(51) {
-  animation-delay: 5.6146948966s;
+  animation-delay: 5.8262324693s;
 }
 #projects .tagContainer .tag:nth-child(52) {
-  animation-delay: 5.584137873s;
+  animation-delay: 5.4999501028s;
 }
 #projects .tagContainer .tag:nth-child(53) {
-  animation-delay: 5.9442292185s;
+  animation-delay: 5.5992027407s;
 }
 #projects .tagContainer .tag:nth-child(54) {
-  animation-delay: 5.9587936728s;
+  animation-delay: 5.6915670911s;
 }
 #projects .tagContainer .tag:nth-child(55) {
-  animation-delay: 6.0385910037s;
+  animation-delay: 5.8367419635s;
 }
 #projects .tagContainer .tag:nth-child(56) {
-  animation-delay: 6.0043656659s;
+  animation-delay: 6.3392335066s;
 }
 #projects .tagContainer .tag:nth-child(57) {
-  animation-delay: 6.2221084468s;
+  animation-delay: 6.3559712434s;
 }
 #projects .tagContainer .tag:nth-child(58) {
-  animation-delay: 6.1222618428s;
+  animation-delay: 6.4353268865s;
 }
 #projects .tagContainer .tag:nth-child(59) {
-  animation-delay: 6.3163321393s;
+  animation-delay: 6.3755146796s;
 }
 #projects .tagContainer .tag:nth-child(60) {
-  animation-delay: 6.5604681824s;
+  animation-delay: 6.6787666391s;
 }
 #projects .tagContainer .tag:nth-child(61) {
-  animation-delay: 6.3636573646s;
+  animation-delay: 6.4717623475s;
 }
 #projects .tagContainer .tag:nth-child(62) {
-  animation-delay: 6.9226229746s;
+  animation-delay: 6.9344565947s;
 }
 #projects .tagContainer .tag:nth-child(63) {
-  animation-delay: 6.8638195452s;
+  animation-delay: 6.8313095324s;
 }
 #projects .tagContainer .tag:nth-child(64) {
-  animation-delay: 6.8999247893s;
+  animation-delay: 7.067652879s;
 }
 #projects .tagContainer .tag:nth-child(65) {
-  animation-delay: 6.7881272163s;
+  animation-delay: 6.9068570192s;
 }
 #projects .tagContainer .tag:nth-child(66) {
-  animation-delay: 7.2406388082s;
+  animation-delay: 7.1760874716s;
 }
 #projects .tagContainer .tag:nth-child(67) {
-  animation-delay: 7.4061843403s;
+  animation-delay: 7.1816106941s;
 }
 #projects .tagContainer .tag:nth-child(68) {
-  animation-delay: 7.5448423875s;
+  animation-delay: 7.1763947763s;
 }
 #projects .tagContainer .tag:nth-child(69) {
-  animation-delay: 7.4611527924s;
+  animation-delay: 7.1963019224s;
 }
 #projects .tagContainer .tag:nth-child(70) {
-  animation-delay: 7.2541629568s;
+  animation-delay: 7.7337863994s;
 }
 #projects .tagContainer .tag:nth-child(71) {
-  animation-delay: 7.4520823132s;
+  animation-delay: 7.370900379s;
 }
 #projects .tagContainer .tag:nth-child(72) {
-  animation-delay: 7.460247952s;
+  animation-delay: 7.6172050649s;
 }
 #projects .tagContainer .tag:nth-child(73) {
-  animation-delay: 7.7305875957s;
+  animation-delay: 7.9989427545s;
 }
 #projects .tagContainer .tag:nth-child(74) {
-  animation-delay: 7.9199291375s;
+  animation-delay: 8.0735531312s;
 }
 #projects .tagContainer .tag:nth-child(75) {
-  animation-delay: 7.7588423354s;
+  animation-delay: 8.1636742019s;
 }
 #projects .tagContainer .tag:nth-child(76) {
-  animation-delay: 8.3070152183s;
+  animation-delay: 8.2656847224s;
 }
 #projects .tagContainer .tag:nth-child(77) {
-  animation-delay: 8.0058375833s;
+  animation-delay: 8.0228267524s;
 }
 #projects .tagContainer .tag:nth-child(78) {
-  animation-delay: 8.4399486298s;
+  animation-delay: 8.3784120583s;
 }
 #projects .tagContainer .tag:nth-child(79) {
-  animation-delay: 8.488279897s;
+  animation-delay: 8.5786871937s;
 }
 #projects .tagContainer .tag:nth-child(80) {
-  animation-delay: 8.5721437179s;
+  animation-delay: 8.3883803391s;
 }
 #projects .tagContainer .tag:nth-child(81) {
-  animation-delay: 8.7161610016s;
+  animation-delay: 8.5876539329s;
 }
 #projects .tagContainer .tag:nth-child(82) {
-  animation-delay: 8.515937662s;
+  animation-delay: 8.5841655573s;
 }
 #projects .tagContainer .tag:nth-child(83) {
-  animation-delay: 8.703574369s;
+  animation-delay: 8.8619202495s;
 }
 #projects .tagContainer .tag:nth-child(84) {
-  animation-delay: 9.1070848556s;
+  animation-delay: 8.7899401733s;
 }
 #projects .tagContainer .tag:nth-child(85) {
-  animation-delay: 9.2108107452s;
+  animation-delay: 8.9037726714s;
 }
 #projects .tagContainer .tag:nth-child(86) {
-  animation-delay: 9.1626268918s;
+  animation-delay: 9.0635089782s;
 }
 #projects .tagContainer .tag:nth-child(87) {
-  animation-delay: 9.2513401273s;
+  animation-delay: 9.2990762145s;
 }
 #projects .tagContainer .tag:nth-child(88) {
-  animation-delay: 9.3218330758s;
+  animation-delay: 9.1342282609s;
 }
 #projects .tagContainer .tag:nth-child(89) {
-  animation-delay: 9.6040750818s;
+  animation-delay: 9.388096405s;
 }
 #projects .tagContainer .tag:nth-child(90) {
-  animation-delay: 9.6152426878s;
+  animation-delay: 9.5345478985s;
 }
 #projects .tagContainer .tag:nth-child(91) {
-  animation-delay: 9.6336786479s;
+  animation-delay: 9.7738967277s;
 }
 #projects .tagContainer .tag:nth-child(92) {
-  animation-delay: 9.8664064336s;
+  animation-delay: 9.4629139286s;
 }
 #projects .tagContainer .tag:nth-child(93) {
-  animation-delay: 9.8222197567s;
+  animation-delay: 9.7030436798s;
 }
 #projects .tagContainer .tag:nth-child(94) {
-  animation-delay: 9.8374743586s;
+  animation-delay: 9.6553555187s;
 }
 #projects .tagContainer .tag:nth-child(95) {
-  animation-delay: 9.8630962049s;
+  animation-delay: 9.8953063803s;
 }
 #projects .tagContainer .tag:nth-child(96) {
-  animation-delay: 10.0361920398s;
+  animation-delay: 10.2397821118s;
 }
 #projects .tagContainer .tag:nth-child(97) {
-  animation-delay: 10.0009209516s;
+  animation-delay: 10.1669403252s;
 }
 #projects .tagContainer .tag:nth-child(98) {
-  animation-delay: 10.37936028s;
+  animation-delay: 10.130326979s;
 }
 #projects .tagContainer .tag:nth-child(99) {
-  animation-delay: 10.6026692504s;
+  animation-delay: 10.3952415282s;
 }
 #projects .tagContainer .tag:nth-child(100) {
-  animation-delay: 10.5494710069s;
+  animation-delay: 10.4103685842s;
 }
 @keyframes slide-in-from-left {
   0% {
@@ -441,10 +446,6 @@
   100% {
     transform: translate(0);
   }
-}
-#projects .projectInfo {
-  /* should auto expand to fill parent div*/
-  padding: 1vh 5vw 5vh 5vw;
 }
 #projects #HCM.has-been-visible, #projects #com.has-been-visible {
   animation: 0.5s ease-in-out slide-in-from-left;
