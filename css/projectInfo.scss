@@ -114,7 +114,7 @@ p {
   /*increase line spacing slightly*/
   line-height: 1.20;
 
-
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
   @media (orientation: portrait) {
     font-size: 4vw;
   }
@@ -147,13 +147,21 @@ h2 {
 .tagContainer{
 
     .tag{
+       padding: 2px 2px 2px 2px;
+       margin: 2px 1px 2px 1px;
+       border: 2px outset rgb(69, 52, 125);
+      // margin: 2px 2px 2px 2px;
         display: inline-block;
-        color:var(--text-disabled);
-        background-color: var(--titleHighlight);
+        color: rgb(255, 255, 255);
+        background-color: rgb(58, 58, 128);
         scroll-snap-align: start;
         transform: scaleX(0);
         transform: scaleY(0);
         box-shadow: rgba(0, 0, 0, 0.5) 8px 8px $shadow-blur;
+        font-family: monaco, Consolas, Lucida Console, monospace;
+        font-size: 80%;
+        font-weight: 300% ;
+        text-shadow: 0 0 1px black;
     }
 
     .tag.has-been-visible
@@ -171,7 +179,7 @@ h2 {
         animation-delay: #{$delay};
       }
     }
-
+  
 }
 
 
