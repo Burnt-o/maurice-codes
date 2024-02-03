@@ -52,9 +52,8 @@
 
   
   // display content
-  require 'stickyHeader.html';
   require 'main.php';
-
+  require 'stickyHeader.html';
   ?>
 <script src="js/intersectionObserver.js"></script> 
 <div id="background-image">
