@@ -1,11 +1,13 @@
 
-/* * {
-  outline: 1px solid #f00 !important;
-} */
+html {
+  box-sizing: padding-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 *{
-  margin: 0px;
-  
+  margin: 0px 0px 0px 0px;
 }
 
 @keyframes clip-fade {
