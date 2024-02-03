@@ -203,7 +203,7 @@ margin:auto;
 #hero-transition-wrapper{
   position: absolute;
   top: 99vh;
-  z-index: 1000;
+  z-index: 7;
   height: 3vh;
   @media (orientation: portrait) {
     height: 2vh;
