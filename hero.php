@@ -22,8 +22,7 @@ When the user scrolls down, the title text will move down too and disappear behi
         <div id="background-hero-foreground">
         </div>
 
-        <div id="background-image-lights" class="observe-lights">
-        </div>
+
 
         <div id="hero-background-lights" class="observe-lights">
         </div>

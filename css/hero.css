@@ -95,13 +95,13 @@
   
      background-image: url("../assets/images/backgrounds/background-vertically-tiling-lights-2.png");
     background-repeat: repeat-y;
-    background-size: contain;
+    background-size: cover;
     z-index: 3;
     position:absolute;
     top: 0vh; 
     overflow-y: hidden;
     overflow-x: hidden;
-    height: 1000vh;
+    height: 100%;
     width: 100%;
   }
 
@@ -194,7 +194,7 @@ margin:auto;
   /* empty div so content after hero gets pushed down */
 #hero-spacer
 {
-  height:97vh;
+  height:100vh;
 
 }
 
