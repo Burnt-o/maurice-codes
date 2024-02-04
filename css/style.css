@@ -105,27 +105,23 @@ section {
 
 }
 
-a{
-  /* content to center of screen*/
-  display: block;
-  text-align: center;
-}
+
 
 /*TODO: update these placeholder colours*/
 a:link {
-  color: gray;
+  color: rgb(197, 74, 3);
 }
 
 a:visited {
-  color: green;
+color: rgb(110, 110, 213);
 }
 
 a:hover {
-  color: rebeccapurple;
+color: rgb(180, 104, 255);
 }
 
 a:active {
-  color: teal;
+color: rgb(255, 255, 255);
 } 
   
 #anchorLink 

@@ -5,7 +5,7 @@ $shadow-blur: 10px;
 $shadow-color: #000000;
 $bevel-background-alpha: 1.0;
 
-$desktop-project-width: 60%;
+$desktop-project-width: 50%;
 $mobile-project-width: 80%;
 
 #projects{
@@ -13,6 +13,12 @@ $mobile-project-width: 80%;
   padding-bottom: 15vh;
 
 $section-intro-duration: 0.5s;
+
+a{
+  /* content to center of screen*/
+  display: block;
+  text-align: center;
+}
 
 .projectInfoWrapper
 {
