@@ -1,5 +1,5 @@
 <section id="contactSection" class="light-trigger observe-visibility">
-    <a id="contactAnchor"></a>
+    <a id="contactAnchor" class="nav-anchor"></a>
     <div id="contact-background-container">
         <div id="contact-background-border">
             <div id="contact-background">
@@ -47,6 +47,7 @@
 
         </div>
     </div>
+
 
 
 </section>

@@ -2,7 +2,7 @@
 
 
 <div class="main" >
-    <a id ="heroAnchor"></a>
+    <a id ="heroAnchor" class="nav-anchor"></a>
 
 
 
@@ -11,12 +11,14 @@
 <?php
 include "hero.php";
 ?>
-
+<div id="hero-transition-wrapper">
+                 <img id="hero-transition" src="assets/images/backgrounds/hero-transition-3.png"></img>
+ </div>
 <div id="content">
 
 
             <div id="projects">
-                <a id="projectsAnchor">
+                <a id="projectsAnchor" class="nav-anchor">
                 </a>
 
                 <?php
@@ -36,6 +38,17 @@ include "hero.php";
             <?php
     include "contact.php";
     ?>
+
+
+
+
+<div id="background-image">
+<div id="background-image-lights" class="background-lights observe-lights">
+</div>
+</div>
+
+
+
 
 </div>
 

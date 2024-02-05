@@ -2,32 +2,27 @@
 
 #contactSection{
     z-index: 10;
-
     position: relative;
 
     width: 100%;
-    height: 80vh;
-    padding-bottom: 10vh;
+    height: 40vh; 
+
     margin:auto;
 
+    /*
+    TODO::
+    reorganise sizing so both the contact-background and content-content
+    are limited to the same relative area (while being siblings to prevent
+    background blurring content)
+    */
     
-/* 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-    "contact contact contact"
-    "copyright copyright copyright"; */
 
 }
 
 #contact-background-container
 {
-
-
   height: 100%;
   width: 100%;
-
 }
 
 #contact-background-border
@@ -35,7 +30,7 @@
     clip-path: polygon(74% 0, 89% 10%, 100% 10%, 100% 80%, 90% 90%, 75% 90%, 70% 85%, 15% 85%, 0 70%, 0 0);
     backdrop-filter: invert(10%);
     filter: blur(2px);
-    height: 65%;
+    height: 100%;
     width: 40%;
     margin: auto;
 
@@ -68,7 +63,7 @@
 }
 
 #contact-content{
-
+    overflow: hidden;
     p{
         text-align: left;
         font-size: 1.2em;
@@ -82,7 +77,7 @@
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
-    height: 80%;
+    height: 40vh;
     width: 60%;
     margin: auto;
     padding-left: 2vw;
@@ -144,3 +139,8 @@
     color: red;
 }
 
+
+#contact-spacer{
+    height: 20vh;
+    width: 100%;
+}

@@ -24,7 +24,7 @@ When the user scrolls down, the title text will move down too and disappear behi
 
 
 
-        <div id="hero-background-lights" class="observe-lights">
+        <div id="hero-background-lights" class="background-lights observe-lights">
         </div>
 
 
@@ -48,7 +48,4 @@ When the user scrolls down, the title text will move down too and disappear behi
 <div id = "hero-spacer"></div>
 
 
-<div id="hero-transition-wrapper">
-                 <img id="hero-transition" src="assets/images/backgrounds/hero-transition-3.png"></img>
- </div>
 

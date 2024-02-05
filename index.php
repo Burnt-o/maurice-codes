@@ -58,10 +58,7 @@
 <script src="js/intersectionObserver.js"></script> 
 
 
-<div id="background-image">
-<div id="background-image-lights" class="observe-lights">
-        </div>
-</div>
+
 
 
 </body>
