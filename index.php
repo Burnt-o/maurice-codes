@@ -40,9 +40,22 @@
   <link rel="stylesheet" href="css/stickyHeader.css" type="text/css">
   <link rel="stylesheet" href="css/projectInfo.css" type="text/css">
   <link rel="stylesheet" href="css/contact.css" type="text/css">
+  <link rel="stylesheet" href="css/preloader.css" type="text/css">
 </head>
 
 <body>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
+<!--CSS Spinner-->
+<div class="spinner-background">
+</div>
+<div class="spinner-container">
+  <div class="spinner">
+  </div>
+</div>
+
 <!--toggles is-visible class on animated elements-->
 <script src="js/scrollObserver.js"></script> 
   <?php
@@ -55,8 +68,8 @@
   require 'main.php';
   require 'stickyHeader.html';
   ?>
-<script src="js/intersectionObserver.js"></script> 
-
+<script src="js/intersectionObserver.js" ></script> 
+<script src="js/preloader.js"></script> 
 
 
 

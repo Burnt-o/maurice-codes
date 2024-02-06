@@ -43,7 +43,7 @@ function lightTriggerCallback(entries, observer)
 {
 
   // if ANY entry is intersecting, then set lights to true. else set to false.
-  $areLightsTriggered = entries.some(entry => {
+  var $areLightsTriggered = entries.some(entry => {
     return entry.isIntersecting;
   });
 

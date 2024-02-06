@@ -16,6 +16,9 @@ html {
   display:none; 
 }
 
+body{
+  background-color: rgb(46, 56, 85);
+}
 
 
 #hero-transition-wrapper {
