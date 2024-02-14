@@ -3,7 +3,7 @@ When the user scrolls down, the title text will move down too and disappear behi
 -->
 
 
-<div id ="hero">
+<div id ="hero" class="animation-toggle-listener">
 
 
     <div id="hero-paragraph-text-wrapper">

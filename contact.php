@@ -1,4 +1,4 @@
-<section id="contactSection" class="light-trigger observe-visibility">
+<section id="contactSection" class="light-trigger observe-visibility animation-toggle-listener">
     <a id="contactAnchor" class="nav-anchor"></a>
     <div id="contact-background-container">
         <div id="contact-background-border">

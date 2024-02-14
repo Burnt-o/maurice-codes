@@ -1,10 +1,28 @@
-<div id="stickyHeader">
+<li id="stickyHeader" class="animation-toggle-listener">
   <nav id="">
     <ul>
+      <!--these will all just be jump links within same page -->
       <li><a href="#heroAnchor">Home</a></li>
       <li><a href="#projectsAnchor">Projects</a></li>
       <li><a href="#contactAnchor">Contact</a></li>
-      <!--these will all just be jump links within same page https://blog.hubspot.com/marketing/jump-link-same-page -->
+
+      <!--user toggle to control whether css animations/effects should be enabled-->
+      <div id="animation-toggle-container">
+          <li><p>Animations</p></li>
+          <li>
+            <input type="checkbox"
+            id="switch"
+            name="animation-toggle"
+            class="checkbox" />
+  
+            <label for="switch"
+                class="toggle">
+            </label>
+          </li>
+      </div>
+
+     
     </ul>
+
   </nav>
-</div>
+</li>

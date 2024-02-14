@@ -95,6 +95,10 @@
     
   }
 
+  #hero-background-lights.animation-toggle-enabled{
+    animation: light-pulse infinite 4s running;
+  }
+
   #hero-title-normal {
     display: block; 
     position: fixed;

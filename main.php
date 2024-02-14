@@ -43,7 +43,7 @@ include "hero.php";
 
 
 <div id="background-image">
-<div id="background-image-lights" class="background-lights observe-lights">
+<div id="background-image-lights" class="background-lights observe-lights animation-toggle-listener">
 </div>
 </div>
 

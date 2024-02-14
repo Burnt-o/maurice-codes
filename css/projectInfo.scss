@@ -68,6 +68,10 @@ a{
   height: 100%;
   width: 100%;
 
+
+}
+
+.beveled-background-container.animation-toggle-enabled{
   filter:  drop-shadow(12vw 8vh 15px rgba(0,0,0,0.5));
 }
 
@@ -78,20 +82,27 @@ a{
 
 .beveled-background-border{
   //background-color: rgb(0, 162, 255);
-  background: linear-gradient(90deg,rgb(0, 59, 93) 0%, rgb(129, 209, 255) 50%, rgb(0, 59, 93) 100%);
+
+  background: rgb(87, 170, 219);
   background-size: 300vw 100%;
   width: $desktop-project-width;
   margin:auto;
   padding: 2px 2px 2px 2px; // controls border thickness
 
+ }
+
+ .beveled-background-border.animation-toggle-enabled{
   // animate a cool glowing pulse effect in sync with the background lights
+
+  background: linear-gradient(90deg,rgb(0, 59, 93) 0%, rgb(129, 209, 255) 50%, rgb(0, 59, 93) 100%);
+  background-size: 300vw 100%;
   animation-name: animate-bevel-border;
   animation-duration: 4s;
-  animation-delay: 1.5s;
+  animation-delay: -2.5s; 
   animation-fill-mode:forwards;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
- }
+  }
 
 
 
@@ -173,8 +184,8 @@ padding: 1vh 5vw 5vh 5vw;
         color: rgb(255, 255, 255);
         background-color: rgb(58, 58, 128);
         scroll-snap-align: start;
-        transform: scaleX(0);
-        transform: scaleY(0);
+         transform: scaleX(1);
+         transform: scaleY(1);
         box-shadow: rgba(0, 0, 0, 0.5) 8px 8px $shadow-blur;
         font-family: monaco, Consolas, Lucida Console, monospace;
         font-size: 80%;
@@ -182,8 +193,14 @@ padding: 1vh 5vw 5vh 5vw;
         text-shadow: 0 0 1px black;
     }
 
-    .tag.has-been-visible
+    .tag.animation-toggle-enabled{
+      transform: scaleX(0);
+      transform: scaleY(0);
+    }
+
+    .tag.has-been-visible.tag.animation-toggle-enabled
     {
+
       animation-name: expand-from-nothing;
       animation-duration: 0.5s;
       animation-fill-mode: forwards;
@@ -240,25 +257,34 @@ padding: 1vh 5vw 5vh 5vw;
 
 
 /* alternate slide-in-from-left and slide-in-from-right for each project. Hide off screen when not visible. */
-#HCM.has-been-visible, #com.has-been-visible{
+#HCM.has-been-visible.animation-toggle-enabled, #com.has-been-visible.animation-toggle-enabled{
   animation: $section-intro-duration ease-in-out slide-in-from-left ;
   transform: translate(0, 0);
   }
 
 
-#HCM, #com{
+#HCM.animation-toggle-enabled, #com.animation-toggle-enabled{
   transform: translate(-100%, 0);
   }
 
-#CEER.has-been-visible, #autosplitter.has-been-visible{
+#CEER.has-been-visible.animation-toggle-enabled, #autosplitter.has-been-visible.animation-toggle-enabled{
   animation: $section-intro-duration ease-in-out slide-in-from-right ;
   transform: translate(0, 0);
   }
 
 
-#CEER, #autosplitter{
+#CEER.animation-toggle-enabled, #autosplitter.animation-toggle-enabled{
   transform: translate(100%, 0);
   }
 
+
+  
+  #HCM, #com{
+    transform: translate(0%, 0);
+    }
+
+  #CEER, #autosplitter{
+    transform: translate(0%, 0);
+    }
 
 }

@@ -85,10 +85,13 @@ body{
   mask-size: 100% 100%;
   mask-repeat: no-repeat no-repeat;
 
-  animation: light-pulse infinite 4s;
+
+
 
 }
-
+.background-lights.animation-toggle-enabled{
+  animation: light-pulse infinite 4s running;
+}
 
 
 .summary {
