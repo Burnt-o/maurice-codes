@@ -1,107 +1,118 @@
 #stickyHeader {
-    display: block; 
-    position:fixed;
-    top:0;
-    width:100%;
-    margin: 0;
-    padding: 0;
-    z-index:200;
+  display: block; 
+  position:fixed;
+  top:0;
+  width:100%;
+  margin: 0;
+  padding: 0;
+  z-index:200;
+  --header-font-size: calc(1vw + 1vh);
+  --animation-toggle-height: calc(var(--header-font-size) * 0.8);
 
 
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-      opacity: 100%;
-    background: linear-gradient(to right, rgba(89, 63, 131, 1) 0%, var(--inside-color) 40%, var(--inside-color) 60%, var(--outside-color) 100%);
-      backdrop-filter: blur(3px);
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 90%, rgba(0,0,0,0.0) 100%);
-        /* background-image: linear-gradient(to right, rgb(75, 80, 119) , rgb(89, 63, 131)); */
-        font-family: sans-serif;
-      }
-      
-      li {
-        float: left;
-      }
-      
-      li a {
-        display: block;
-        color: rgb(250, 130, 31);
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 120%;
-        font-weight: 700;
-        text-shadow: rgb(75, 72, 156) 0 0 3px;
-      }
-      
-      /* Change the link color to white on hover */
-      li a:hover {
-        background-color: #c55959;
-      }
-
-      #animation-toggle-container{
-        float: right;
-        padding-right: 4vw;
-      }
-
-      /* animations label for toggle */
-    li p{
-
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    opacity: 100%;
+  background: linear-gradient(to right, rgba(89, 63, 131, 1) 0%, var(--inside-color) 40%, var(--inside-color) 60%, var(--outside-color) 100%);
+    backdrop-filter: blur(3px);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9) 90%, rgba(0,0,0,0.0) 100%);
+      /* background-image: linear-gradient(to right, rgb(75, 80, 119) , rgb(89, 63, 131)); */
+      font-family: sans-serif;
+    }
+    
+    li {
+      float: left;
+    }
+    
+    li a {
       display: block;
-      color: rgb(31, 228, 250);
+      color: rgb(250, 130, 31);
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
-      font-size: 120%;
+      font-size: var(--header-font-size);
       font-weight: 700;
       text-shadow: rgb(75, 72, 156) 0 0 3px;
-
+    }
+    
+    /* Change the link color to white on hover */
+    li a:hover {
+      background-color: #c55959;
     }
 
+    #animation-toggle-container{
+      float: right;
+      padding-right: 4vw;
+    }
 
-    /* toggle in label designing */
-    .toggle {
-      position : relative ;
-      display : inline-block;
-      width : 50px;
-      height : 22px;
-      background-color: rgb(54, 71, 77);
-      border-radius: 30px;
-      border: 2px solid gray;
-      margin-top: 12px;
-  }
-         
-  /* After slide changes */
-  .toggle:after {
-      content: '';
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background-color: gray;
-      top: 1px; 
-      left: 1px;
-      transition:  all 0.5s;
-  }
-         
+    /* animations label for toggle */
+  li p{
 
-         
-  /* Checkbox checked effect */
-  .checkbox:checked + .toggle::after {
-      left : 29px; 
+    display: block;
+    color: rgb(31, 228, 250);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: var(--header-font-size);
+    font-weight: 700;
+    text-shadow: rgb(75, 72, 156) 0 0 3px;
+
   }
-         
-  /* Checkbox checked toggle label bg color */
-  .checkbox:checked + .toggle {
-      background-color: rgb(27, 240, 255);
+
+  /* just used to vertically align the toggle */
+  #animation-toggle-container
+  {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin-right: 5vw;
   }
-         
-  /* Checkbox vanished */
-  .checkbox { 
-      display : none;
-  }
+
+  /* toggle in label designing */
+  .toggle {
+    position : relative ;
+    display: inline-flex;
+    width : calc(var(--animation-toggle-height) * 3);
+    height : calc(var(--animation-toggle-height) + 2px);
+    background-color: rgb(54, 71, 77);
+    border-radius: 30px;
+    border: 2px solid gray;
+
+    
+}
+       
+/* After slide changes */
+.toggle:after {
+    content: '';
+    position: absolute;
+    width: var(--animation-toggle-height);
+    height: var(--animation-toggle-height);
+    border-radius: 50%;
+    background-color: gray;
+    top: 1px; 
+    left: 1px;
+    transition:  all 0.5s;
+}
+       
+
+       
+/* Checkbox checked effect */
+.checkbox:checked + .toggle::after {
+    left : calc(var(--animation-toggle-height) * 1.9); 
+}
+       
+/* Checkbox checked toggle label bg color */
+.checkbox:checked + .toggle {
+    background-color: rgb(27, 240, 255);
+}
+       
+/* Checkbox vanished */
+.checkbox { 
+    display : none;
+}
 
 
 }
