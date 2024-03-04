@@ -1,18 +1,24 @@
 
+
+
 @keyframes glass-blur {
+
   0%{
-    filter:blur(4px);
+    filter:blur(calc(0.1vh + 0.1vw));
   }
 
+  2%{
+    filter:blur(calc(0.2vh + 0.2vw));
+  }
 
   8%{
-    filter:blur(6px);
+    filter:blur(calc(0.4vh + 0.4vw));
   }
   15%{
-    filter:blur(8px);
+    filter:blur(calc(0.5vh + 0.5vw));
   }
   100%{
-    filter:blur(10px);
+    filter:blur(calc(0.6vh + 0.6vw));
   }
 }
 
@@ -43,7 +49,7 @@
     text-align: center;
     background-color: var(--color);
     font-family: "Lucida Console", monospace;
-    font-size: 8.5vh;
+    font-size: calc(4vw + 2vh);
     padding: 16px;
     padding-top: 4px;
     padding-bottom: 8px;
@@ -122,13 +128,13 @@
     top: 15vh;
     margin:auto;
     width: 100%;
-    -webkit-text-stroke: var(--hero-title-highlight) 2px;
+
 
     animation: glass-expand 1s linear infinite, glass-blur 1s linear infinite;
 
 
     animation-play-state: paused;
-    animation-delay: calc(var(--scroll) * -1s);
+    animation-delay: 2s;
 
     animation-iteration-count: 1;
     animation-fill-mode: both;
@@ -137,7 +143,14 @@
 
   }
 
+  #hero-title-glass.animation-toggle-enabled{
+    animation-delay: calc(var(--scroll) * -1s);
+  }
 
+  #hero-title-glass:not(.animation-toggle-enabled){
+    animation: none;
+    filter:blur(calc(0.4vh + 0.4vw));
+  }
 
 
 

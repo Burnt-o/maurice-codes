@@ -1,13 +1,11 @@
 window.addEventListener(
   "scroll",
   () => {
-    let percentScroll = window.scrollY / (document.body.offsetHeight - window.innerHeight);
-    percentScroll = percentScroll * -0.01;
+    let percentScroll = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
     document.body.style.setProperty(
       "--scroll",
       percentScroll
     );
-     console.log(percentScroll);
   },
   false
 );
