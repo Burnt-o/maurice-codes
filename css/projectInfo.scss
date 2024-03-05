@@ -5,14 +5,18 @@ $shadow-blur: 10px;
 $shadow-color: #000000;
 $bevel-background-alpha: 1.0;
 
-$desktop-project-width: 50%;
-$mobile-project-width: 80%;
+$desktop-project-width: 70%;
+$mobile-project-width: 95%;
+
+$font-size-base: calc(0.5vw + 1.5vh);
+
 
 #projects{
   overflow-x:hidden;
   padding-bottom: 15vh;
 
 $section-intro-duration: 0.5s;
+
 
 a{
   /* content to center of screen*/
@@ -64,7 +68,7 @@ a{
 }
 
 .beveled-background-container{
-  padding: 3vh 1vw 12vh 1vw;
+  padding: 3vh 1vw 12vh 0vw;
   height: 100%;
   width: 100%;
 
@@ -77,7 +81,16 @@ a{
 
 
 .beveled-background-border, .beveled-background-inner{
-  clip-path: polygon(90% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
+
+  clip-path: polygon(calc(100% - 10%) 0, 100% calc(10% * var(--child-aspect-ratio)), 100% 100%, 0 100%, 0 0);
+
+  // --aspect-ratio set by elementAspectRatioObserver.js 
+
+/*
+given width x
+
+*/
+
 }
 
 .beveled-background-border{
@@ -88,6 +101,10 @@ a{
   width: $desktop-project-width;
   margin:auto;
   padding: 2px 2px 2px 2px; // controls border thickness
+
+  @media (orientation: portrait) {
+    width: $mobile-project-width;
+  }
 
  }
 
@@ -116,15 +133,17 @@ a{
   /* should auto expand to fill parent div*/
 padding: 1vh 5vw 5vh 5vw;
 
-
+@media (orientation: portrait) {
+  padding: 1vh 5vw 5vh 5vw;
+}
 
 
   h2 {
-    /* same as above with slightly smaller font */ 
+    /* same as h1 with slightly smaller font */ 
     text-align: center;
     background-color: var(--color);
     font-family: "public-pixel", monospace;
-    font-size: 3em;
+    font-size: calc($font-size-base * 2);
     padding: 16px;
     padding-top: 40px;
     padding-bottom: 0px;
@@ -140,18 +159,21 @@ padding: 1vh 5vw 5vh 5vw;
     margin-top: 0;
     margin-bottom: 0.3em;
     margin: auto;
-    width: 80%;
+
     text-align: left;
-    font-size: 120%;
+
     text-shadow: black 0 0 10px, black 0 0 5px;//, $shadow-color $shadow-x-distance $shadow-y-distance $shadow-blur;
     color: var(--text);
 
     /*increase line spacing slightly*/
     line-height: 1.20;
 
+    font-size: $font-size-base;
+    width: 80%;
+    padding-bottom: 2vh;
     font-family: Tahoma, Verdana, Segoe, sans-serif;
     @media (orientation: portrait) {
-      font-size: 4vw;
+      width: 95%;
     }
 
   }
@@ -177,7 +199,7 @@ padding: 1vh 5vw 5vh 5vw;
   margin:auto;
     .tag{
        padding: 2px 2px 2px 2px;
-       margin: 2px 1px 2px 1px;
+       margin: 1px 1px 1px 1px;
        border: 2px outset rgb(69, 52, 125);
       // margin: 2px 2px 2px 2px;
         display: inline-block;
@@ -188,7 +210,7 @@ padding: 1vh 5vw 5vh 5vw;
          transform: scaleY(1);
         box-shadow: rgba(0, 0, 0, 0.5) 8px 8px $shadow-blur;
         font-family: monaco, Consolas, Lucida Console, monospace;
-        font-size: 80%;
+        font-size: calc($font-size-base * 0.7);
         font-weight: 300% ;
         text-shadow: 0 0 1px black;
     }

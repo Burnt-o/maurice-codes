@@ -39,7 +39,7 @@
   padding-top: 15vh;
 }
 #projects .beveled-background-container {
-  padding: 3vh 1vw 12vh 1vw;
+  padding: 3vh 1vw 12vh 0vw;
   height: 100%;
   width: 100%;
 }
@@ -47,15 +47,24 @@
   filter: drop-shadow(12vw 8vh 15px rgba(0, 0, 0, 0.5));
 }
 #projects .beveled-background-border, #projects .beveled-background-inner {
-  -webkit-clip-path: polygon(90% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
-          clip-path: polygon(90% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
+  -webkit-clip-path: polygon(90% 0, 100% calc(10% * var(--child-aspect-ratio)), 100% 100%, 0 100%, 0 0);
+          clip-path: polygon(90% 0, 100% calc(10% * var(--child-aspect-ratio)), 100% 100%, 0 100%, 0 0);
+  /*
+  given width x
+
+  */
 }
 #projects .beveled-background-border {
   background: rgb(87, 170, 219);
   background-size: 300vw 100%;
-  width: 50%;
+  width: 70%;
   margin: auto;
   padding: 2px 2px 2px 2px;
+}
+@media (orientation: portrait) {
+  #projects .beveled-background-border {
+    width: 95%;
+  }
 }
 #projects .beveled-background-border.animation-toggle-enabled {
   background: linear-gradient(90deg, rgb(0, 59, 93) 0%, rgb(129, 209, 255) 50%, rgb(0, 59, 93) 100%);
@@ -74,12 +83,17 @@
   /* should auto expand to fill parent div*/
   padding: 1vh 5vw 5vh 5vw;
 }
+@media (orientation: portrait) {
+  #projects .projectInfo {
+    padding: 1vh 5vw 5vh 5vw;
+  }
+}
 #projects .projectInfo h2 {
-  /* same as above with slightly smaller font */
+  /* same as h1 with slightly smaller font */
   text-align: center;
   background-color: var(--color);
   font-family: "public-pixel", monospace;
-  font-size: 3em;
+  font-size: calc((0.5vw + 1.5vh) * 2);
   padding: 16px;
   padding-top: 40px;
   padding-bottom: 0px;
@@ -93,18 +107,19 @@
   margin-top: 0;
   margin-bottom: 0.3em;
   margin: auto;
-  width: 80%;
   text-align: left;
-  font-size: 120%;
   text-shadow: black 0 0 10px, black 0 0 5px;
   color: var(--text);
   /*increase line spacing slightly*/
   line-height: 1.2;
+  font-size: calc(0.5vw + 1.5vh);
+  width: 80%;
+  padding-bottom: 2vh;
   font-family: Tahoma, Verdana, Segoe, sans-serif;
 }
 @media (orientation: portrait) {
   #projects .projectInfo p {
-    font-size: 4vw;
+    width: 95%;
   }
 }
 #projects .tagContainer {
@@ -116,7 +131,7 @@
 }
 #projects .tagContainer .tag {
   padding: 2px 2px 2px 2px;
-  margin: 2px 1px 2px 1px;
+  margin: 1px 1px 1px 1px;
   border: 2px outset rgb(69, 52, 125);
   display: inline-block;
   color: rgb(255, 255, 255);
@@ -126,7 +141,7 @@
   transform: scaleY(1);
   box-shadow: rgba(0, 0, 0, 0.5) 8px 8px 10px;
   font-family: monaco, Consolas, Lucida Console, monospace;
-  font-size: 80%;
+  font-size: calc((0.5vw + 1.5vh) * 0.7);
   font-weight: 300%;
   text-shadow: 0 0 1px black;
 }
@@ -141,304 +156,304 @@
   animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 #projects .tagContainer .tag:nth-child(1) {
-  animation-delay: 0.8174083196s;
+  animation-delay: 0.5464130919s;
 }
 #projects .tagContainer .tag:nth-child(2) {
-  animation-delay: 0.5593592889s;
+  animation-delay: 0.6637017011s;
 }
 #projects .tagContainer .tag:nth-child(3) {
-  animation-delay: 0.5719983545s;
+  animation-delay: 0.9337730223s;
 }
 #projects .tagContainer .tag:nth-child(4) {
-  animation-delay: 0.9952571048s;
+  animation-delay: 1.1164294558s;
 }
 #projects .tagContainer .tag:nth-child(5) {
-  animation-delay: 0.9734709025s;
+  animation-delay: 0.8501282187s;
 }
 #projects .tagContainer .tag:nth-child(6) {
-  animation-delay: 1.1892808917s;
+  animation-delay: 1.0125780618s;
 }
 #projects .tagContainer .tag:nth-child(7) {
-  animation-delay: 1.3679057064s;
+  animation-delay: 1.4191072851s;
 }
 #projects .tagContainer .tag:nth-child(8) {
-  animation-delay: 1.5015707562s;
+  animation-delay: 1.4916127489s;
 }
 #projects .tagContainer .tag:nth-child(9) {
-  animation-delay: 1.3358768669s;
+  animation-delay: 1.1937946024s;
 }
 #projects .tagContainer .tag:nth-child(10) {
-  animation-delay: 1.7270759651s;
+  animation-delay: 1.2838323995s;
 }
 #projects .tagContainer .tag:nth-child(11) {
-  animation-delay: 1.5018586245s;
+  animation-delay: 1.7460155903s;
 }
 #projects .tagContainer .tag:nth-child(12) {
-  animation-delay: 1.5511189648s;
+  animation-delay: 1.7514602479s;
 }
 #projects .tagContainer .tag:nth-child(13) {
-  animation-delay: 1.9516275006s;
+  animation-delay: 1.7592765787s;
 }
 #projects .tagContainer .tag:nth-child(14) {
-  animation-delay: 1.9554889373s;
+  animation-delay: 1.7664714444s;
 }
 #projects .tagContainer .tag:nth-child(15) {
-  animation-delay: 2.0730333782s;
+  animation-delay: 1.9546222271s;
 }
 #projects .tagContainer .tag:nth-child(16) {
-  animation-delay: 2.0816426117s;
+  animation-delay: 2.0983070895s;
 }
 #projects .tagContainer .tag:nth-child(17) {
-  animation-delay: 1.996584727s;
+  animation-delay: 1.9891543672s;
 }
 #projects .tagContainer .tag:nth-child(18) {
-  animation-delay: 2.497685134s;
+  animation-delay: 2.2232858107s;
 }
 #projects .tagContainer .tag:nth-child(19) {
-  animation-delay: 2.6066899032s;
+  animation-delay: 2.4116223857s;
 }
 #projects .tagContainer .tag:nth-child(20) {
-  animation-delay: 2.7024914653s;
+  animation-delay: 2.6037643144s;
 }
 #projects .tagContainer .tag:nth-child(21) {
-  animation-delay: 2.6084298183s;
+  animation-delay: 2.7181365284s;
 }
 #projects .tagContainer .tag:nth-child(22) {
-  animation-delay: 2.8608981854s;
+  animation-delay: 2.7740059205s;
 }
 #projects .tagContainer .tag:nth-child(23) {
-  animation-delay: 2.9472679048s;
+  animation-delay: 2.9846465979s;
 }
 #projects .tagContainer .tag:nth-child(24) {
-  animation-delay: 2.9101819283s;
+  animation-delay: 3.0682205113s;
 }
 #projects .tagContainer .tag:nth-child(25) {
-  animation-delay: 3.1355991112s;
+  animation-delay: 3.2113971565s;
 }
 #projects .tagContainer .tag:nth-child(26) {
-  animation-delay: 3.2751165379s;
+  animation-delay: 3.1191819868s;
 }
 #projects .tagContainer .tag:nth-child(27) {
-  animation-delay: 3.2007446457s;
+  animation-delay: 3.2677763191s;
 }
 #projects .tagContainer .tag:nth-child(28) {
-  animation-delay: 3.224045618s;
+  animation-delay: 3.2520128661s;
 }
 #projects .tagContainer .tag:nth-child(29) {
-  animation-delay: 3.1796049264s;
+  animation-delay: 3.1803614633s;
 }
 #projects .tagContainer .tag:nth-child(30) {
-  animation-delay: 3.3054700958s;
+  animation-delay: 3.6943799473s;
 }
 #projects .tagContainer .tag:nth-child(31) {
-  animation-delay: 3.802987661s;
+  animation-delay: 3.8030992639s;
 }
 #projects .tagContainer .tag:nth-child(32) {
-  animation-delay: 3.8651254115s;
+  animation-delay: 3.4717547707s;
 }
 #projects .tagContainer .tag:nth-child(33) {
-  animation-delay: 3.6975450686s;
+  animation-delay: 3.6925176962s;
 }
 #projects .tagContainer .tag:nth-child(34) {
-  animation-delay: 3.9624013035s;
+  animation-delay: 3.914510693s;
 }
 #projects .tagContainer .tag:nth-child(35) {
-  animation-delay: 4.2269012544s;
+  animation-delay: 3.8356026485s;
 }
 #projects .tagContainer .tag:nth-child(36) {
-  animation-delay: 4.3329574463s;
+  animation-delay: 4.2738785588s;
 }
 #projects .tagContainer .tag:nth-child(37) {
-  animation-delay: 4.3729995333s;
+  animation-delay: 4.1646678174s;
 }
 #projects .tagContainer .tag:nth-child(38) {
-  animation-delay: 4.0705187608s;
+  animation-delay: 4.0668857103s;
 }
 #projects .tagContainer .tag:nth-child(39) {
-  animation-delay: 4.2266415509s;
+  animation-delay: 4.5903271192s;
 }
 #projects .tagContainer .tag:nth-child(40) {
-  animation-delay: 4.5528064549s;
+  animation-delay: 4.2696720377s;
 }
 #projects .tagContainer .tag:nth-child(41) {
-  animation-delay: 4.7984343848s;
+  animation-delay: 4.4474097607s;
 }
 #projects .tagContainer .tag:nth-child(42) {
-  animation-delay: 4.8686655363s;
+  animation-delay: 4.7855522163s;
 }
 #projects .tagContainer .tag:nth-child(43) {
-  animation-delay: 4.6587760742s;
+  animation-delay: 4.7918572812s;
 }
 #projects .tagContainer .tag:nth-child(44) {
-  animation-delay: 5.021261931s;
+  animation-delay: 4.660494022s;
 }
 #projects .tagContainer .tag:nth-child(45) {
-  animation-delay: 5.1939836399s;
+  animation-delay: 4.7910813572s;
 }
 #projects .tagContainer .tag:nth-child(46) {
-  animation-delay: 4.9115968802s;
+  animation-delay: 5.1216863803s;
 }
 #projects .tagContainer .tag:nth-child(47) {
-  animation-delay: 5.3717392523s;
+  animation-delay: 4.9851693214s;
 }
 #projects .tagContainer .tag:nth-child(48) {
-  animation-delay: 5.2776296033s;
+  animation-delay: 5.348309271s;
 }
 #projects .tagContainer .tag:nth-child(49) {
-  animation-delay: 5.5217946185s;
+  animation-delay: 5.336062408s;
 }
 #projects .tagContainer .tag:nth-child(50) {
-  animation-delay: 5.466073746s;
+  animation-delay: 5.6665153242s;
 }
 #projects .tagContainer .tag:nth-child(51) {
-  animation-delay: 5.4762588045s;
+  animation-delay: 5.689493569s;
 }
 #projects .tagContainer .tag:nth-child(52) {
-  animation-delay: 5.6753917161s;
+  animation-delay: 5.8674415527s;
 }
 #projects .tagContainer .tag:nth-child(53) {
-  animation-delay: 5.6147039665s;
+  animation-delay: 5.5605608382s;
 }
 #projects .tagContainer .tag:nth-child(54) {
-  animation-delay: 5.8247518697s;
+  animation-delay: 5.7244035136s;
 }
 #projects .tagContainer .tag:nth-child(55) {
-  animation-delay: 6.1784478863s;
+  animation-delay: 6.1927227064s;
 }
 #projects .tagContainer .tag:nth-child(56) {
-  animation-delay: 6.041304614s;
+  animation-delay: 6.2972835411s;
 }
 #projects .tagContainer .tag:nth-child(57) {
-  animation-delay: 6.0816770657s;
+  animation-delay: 6.3845327261s;
 }
 #projects .tagContainer .tag:nth-child(58) {
-  animation-delay: 6.4026107774s;
+  animation-delay: 6.5429057152s;
 }
 #projects .tagContainer .tag:nth-child(59) {
-  animation-delay: 6.2512011128s;
+  animation-delay: 6.5330796383s;
 }
 #projects .tagContainer .tag:nth-child(60) {
-  animation-delay: 6.4743678601s;
+  animation-delay: 6.3019174068s;
 }
 #projects .tagContainer .tag:nth-child(61) {
-  animation-delay: 6.5433976349s;
+  animation-delay: 6.7250218535s;
 }
 #projects .tagContainer .tag:nth-child(62) {
-  animation-delay: 6.5920312s;
+  animation-delay: 6.6489795457s;
 }
 #projects .tagContainer .tag:nth-child(63) {
-  animation-delay: 6.8000887267s;
+  animation-delay: 6.7512098804s;
 }
 #projects .tagContainer .tag:nth-child(64) {
-  animation-delay: 6.9269351203s;
+  animation-delay: 6.7892080894s;
 }
 #projects .tagContainer .tag:nth-child(65) {
-  animation-delay: 7.0056966903s;
+  animation-delay: 6.8501246383s;
 }
 #projects .tagContainer .tag:nth-child(66) {
-  animation-delay: 7.2772725911s;
+  animation-delay: 7.0871930299s;
 }
 #projects .tagContainer .tag:nth-child(67) {
-  animation-delay: 7.400196269s;
+  animation-delay: 6.9788422852s;
 }
 #projects .tagContainer .tag:nth-child(68) {
-  animation-delay: 7.4322386418s;
+  animation-delay: 7.3520085027s;
 }
 #projects .tagContainer .tag:nth-child(69) {
-  animation-delay: 7.3505536946s;
+  animation-delay: 7.1693454108s;
 }
 #projects .tagContainer .tag:nth-child(70) {
-  animation-delay: 7.3108332854s;
+  animation-delay: 7.3747363974s;
 }
 #projects .tagContainer .tag:nth-child(71) {
-  animation-delay: 7.66532532s;
+  animation-delay: 7.5957887275s;
 }
 #projects .tagContainer .tag:nth-child(72) {
-  animation-delay: 7.462332974s;
+  animation-delay: 7.6630951516s;
 }
 #projects .tagContainer .tag:nth-child(73) {
-  animation-delay: 7.7478799096s;
+  animation-delay: 7.7633793706s;
 }
 #projects .tagContainer .tag:nth-child(74) {
-  animation-delay: 7.7769776864s;
+  animation-delay: 8.0077421692s;
 }
 #projects .tagContainer .tag:nth-child(75) {
-  animation-delay: 8.1723682236s;
+  animation-delay: 7.7511212191s;
 }
 #projects .tagContainer .tag:nth-child(76) {
-  animation-delay: 8.3010288072s;
+  animation-delay: 7.8916810416s;
 }
 #projects .tagContainer .tag:nth-child(77) {
-  animation-delay: 8.2440291968s;
+  animation-delay: 8.3804970514s;
 }
 #projects .tagContainer .tag:nth-child(78) {
-  animation-delay: 8.4739651554s;
+  animation-delay: 8.4594399513s;
 }
 #projects .tagContainer .tag:nth-child(79) {
-  animation-delay: 8.5209884013s;
+  animation-delay: 8.267261867s;
 }
 #projects .tagContainer .tag:nth-child(80) {
-  animation-delay: 8.3787925573s;
+  animation-delay: 8.6258044765s;
 }
 #projects .tagContainer .tag:nth-child(81) {
-  animation-delay: 8.8373793126s;
+  animation-delay: 8.6044393292s;
 }
 #projects .tagContainer .tag:nth-child(82) {
-  animation-delay: 8.5240790489s;
+  animation-delay: 8.7239574875s;
 }
 #projects .tagContainer .tag:nth-child(83) {
-  animation-delay: 8.9558373425s;
+  animation-delay: 8.6242219983s;
 }
 #projects .tagContainer .tag:nth-child(84) {
-  animation-delay: 8.8118915141s;
+  animation-delay: 8.8873933542s;
 }
 #projects .tagContainer .tag:nth-child(85) {
-  animation-delay: 8.9194134609s;
+  animation-delay: 8.9047544999s;
 }
 #projects .tagContainer .tag:nth-child(86) {
-  animation-delay: 9.1562712327s;
+  animation-delay: 9.1534182574s;
 }
 #projects .tagContainer .tag:nth-child(87) {
-  animation-delay: 9.0407898216s;
+  animation-delay: 8.9555428268s;
 }
 #projects .tagContainer .tag:nth-child(88) {
-  animation-delay: 9.3571201888s;
+  animation-delay: 9.1256447649s;
 }
 #projects .tagContainer .tag:nth-child(89) {
-  animation-delay: 9.2939410612s;
+  animation-delay: 9.2471775716s;
 }
 #projects .tagContainer .tag:nth-child(90) {
-  animation-delay: 9.5965530986s;
+  animation-delay: 9.339257034s;
 }
 #projects .tagContainer .tag:nth-child(91) {
-  animation-delay: 9.5803065548s;
+  animation-delay: 9.3592988342s;
 }
 #projects .tagContainer .tag:nth-child(92) {
-  animation-delay: 9.6107523586s;
+  animation-delay: 9.9082830593s;
 }
 #projects .tagContainer .tag:nth-child(93) {
-  animation-delay: 9.9231197197s;
+  animation-delay: 9.7574511616s;
 }
 #projects .tagContainer .tag:nth-child(94) {
-  animation-delay: 10.0315299008s;
+  animation-delay: 10.1043278614s;
 }
 #projects .tagContainer .tag:nth-child(95) {
-  animation-delay: 9.9855265609s;
+  animation-delay: 10.0401057549s;
 }
 #projects .tagContainer .tag:nth-child(96) {
-  animation-delay: 10.0402867695s;
+  animation-delay: 9.966214573s;
 }
 #projects .tagContainer .tag:nth-child(97) {
-  animation-delay: 10.0206852999s;
+  animation-delay: 10.1581751494s;
 }
 #projects .tagContainer .tag:nth-child(98) {
-  animation-delay: 10.3523317111s;
+  animation-delay: 10.4862396853s;
 }
 #projects .tagContainer .tag:nth-child(99) {
-  animation-delay: 10.3778957875s;
+  animation-delay: 10.2090300598s;
 }
 #projects .tagContainer .tag:nth-child(100) {
-  animation-delay: 10.2999179511s;
+  animation-delay: 10.6557945379s;
 }
 @keyframes slide-in-from-left {
   0% {

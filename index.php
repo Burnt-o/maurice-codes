@@ -70,6 +70,7 @@
   ?>
 <script src="js/intersectionObserver.js" ></script> 
 <script src="js/animationToggleObserver.js" ></script> 
+<script src="js/elementAspectRatioObserver.js" ></script> 
 <script src="js/preloader.js"></script> 
 
 
