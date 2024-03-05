@@ -28,6 +28,7 @@ body{
   height: 3vh;
   @media (orientation: portrait) {
     height: 2vh;
+    bottom: -1.5vh;
   }
 }
 
