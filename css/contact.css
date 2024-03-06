@@ -1,15 +1,11 @@
 #contactSection {
+  --screen-aspect-ratio: 1.0;
+  --contact-height: calc(50vh + (10vh / var(--screen-aspect-ratio)));
   z-index: 10;
   position: relative;
   width: 100%;
-  height: 40vh;
+  height: calc(var(--contact-height));
   margin: auto;
-  /*
-  TODO::
-  reorganise sizing so both the contact-background and content-content
-  are limited to the same relative area (while being siblings to prevent
-  background blurring content)
-  */
 }
 
 #contact-background-container {
@@ -18,20 +14,22 @@
 }
 
 #contact-background-border {
-  -webkit-clip-path: polygon(74% 0, 89% 10%, 100% 10%, 100% 80%, 90% 90%, 75% 90%, 70% 85%, 15% 85%, 0 70%, 0 0);
-          clip-path: polygon(74% 0, 89% 10%, 100% 10%, 100% 80%, 90% 90%, 75% 90%, 70% 85%, 15% 85%, 0 70%, 0 0);
+  --child-aspect-ratio: 1.0;
+  --border-clip-path: polygon(calc(89% - (10% / var(--child-aspect-ratio))) 0%, 89% 10%, 100% 10%, 100% calc(90% - (10% * var(--child-aspect-ratio))), 90% calc(85% + (5% * var(--child-aspect-ratio))), 75% calc(85% + (5% * var(--child-aspect-ratio))), 70% 85%, calc(15% / var(--child-aspect-ratio)) 85%, 0% 70%, 0 0);
+  -webkit-clip-path: var(--border-clip-path);
+          clip-path: var(--border-clip-path);
   -webkit-backdrop-filter: invert(10%);
           backdrop-filter: invert(10%);
   filter: blur(2px);
   height: 100%;
-  width: 40%;
+  width: calc(20vw + 30vh);
   margin: auto;
   padding: 8px 8px 8px 8px; /* controls border thickness */
 }
 
 #contact-background {
-  -webkit-clip-path: polygon(74% 0, 89% 10%, 100% 10%, 100% 80%, 90% 90%, 75% 90%, 70% 85%, 15% 85%, 0 70%, 0 0);
-          clip-path: polygon(74% 0, 89% 10%, 100% 10%, 100% 80%, 90% 90%, 75% 90%, 70% 85%, 15% 85%, 0 70%, 0 0);
+  -webkit-clip-path: var(--border-clip-path);
+          clip-path: var(--border-clip-path);
   background-color: rgba(0, 0, 0, 0.5);
   color: var(--title);
   height: 100%;
@@ -56,20 +54,20 @@
 
 #contact-content {
   overflow: hidden;
-  height: 40vh;
-  width: 60%;
+  height: calc(var(--contact-height));
+  width: calc(20vw + 20vh);
   margin: auto;
   padding-left: 2vw;
 }
 #contact-content p {
   text-align: left;
-  font-size: 1.2em;
+  font-size: 2vh;
   color: var(--text);
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   padding-bottom: 3vh;
+  padding-top: 2vh;
 }
 #contact-content a {
-  font-size: 1em;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 #contact-content h2 {
@@ -77,32 +75,34 @@
   text-align: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-size: 5vh;
-  padding-top: 3vh;
-  padding-bottom: 1.5vh;
+  padding-top: calc(1.5vw + 1.5vh);
+  padding-bottom: 0.75vw;
   padding-right: 1.5vw;
   text-shadow: black 0 0 5px, rgb(245, 129, 40) 0 0 10px;
 }
 #contact-content .contact-text {
   margin: auto;
-  width: 50%;
+  width: 100%;
   height: auto;
 }
 #contact-content .contact-grid-wrapper {
   margin: auto;
-  width: 50%;
-  padding-bottom: 2vh;
+  width: 100%;
+  padding-bottom: 1vw;
 }
 #contact-content .contact-grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(7, 1fr);
 }
 #contact-content .contact-grid-element {
-  padding: 1vh 1vw 1vh 1vw;
+  width: 100%;
 }
-#contact-content .social-link {
-  position: relative;
-  left: 8px;
-  bottom: 15px;
+#contact-content .social-icon {
+  display: block;
+}
+#contact-content .social-link-wrapper {
+  text-align: center;
+  width: 55%;
 }
 
 #contactWrapper.has-been-visible {

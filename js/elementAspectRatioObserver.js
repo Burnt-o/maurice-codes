@@ -5,7 +5,6 @@ setAspectRatio();
 window.addEventListener(
     "resize",
     () => {
-        console.log("window resized");
         setAspectRatio();
     },
     false
