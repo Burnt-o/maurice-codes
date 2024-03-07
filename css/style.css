@@ -18,6 +18,7 @@ html {
 
 body{
   background-color: rgb(46, 56, 85);
+
 }
 
 
@@ -38,14 +39,19 @@ body{
   margin: auto;
 }
 
+.main{
+
+}
+
 #content {
   position: absolute;
   z-index: 5; /* force above hero-title */
+
 }
 
 #background-image {
-  background-image: url("../assets/images/backgrounds/background-vertically-tiling-2.png");
-  height: 100%;
+  background-image: url("../assets/images/backgrounds/background-vertically-tiling-minimal-2.png");
+  height: 101%; /* I don't know why but this is needed to get rid of background gap at bottom*/
   width: 100%;
   background-repeat: repeat-y;
   background-size: cover;
@@ -67,6 +73,7 @@ body{
 .background-lights {
 
   background-image: url("../assets/images/backgrounds/background-vertically-tiling-lights-2.png");
+  opacity: 50%;
   background-repeat: repeat-y;
   background-size: cover;
   position: relative;
@@ -92,6 +99,7 @@ body{
 }
 .background-lights.animation-toggle-enabled{
   animation: light-pulse infinite 4s running;
+  opacity: 100%;
 }
 
 
@@ -103,7 +111,7 @@ body{
 
 
 a:link {
-  color: rgb(197, 74, 3);
+  color: #fbb25d;
 }
 
 a:visited {

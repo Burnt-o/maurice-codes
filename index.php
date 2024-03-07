@@ -78,11 +78,5 @@
 
 
 </body>
-<footer>
-  <?php
-
-  ?>
- 
-</footer>
 
 </html>

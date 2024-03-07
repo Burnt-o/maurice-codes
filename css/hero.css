@@ -40,6 +40,17 @@
 
 }
 
+@keyframes light-pulse-halo {
+  0% {
+    mask-position: 100vw;
+  }
+
+  100% {
+    mask-position: -200vw;
+  }
+}
+
+
 #hero
 {
 
@@ -93,16 +104,85 @@
 
   #hero-background-lights
   {
-    opacity: 15%;
+    background-image: url("../assets/images/backgrounds/hero-image-background-lights-base.png");
+    background-repeat: no-repeat, no-repeat;
+    height: 100%;
+    width: 100%;
+    background-position: top;
+
     z-index: 3; /* over hero background but under hero foreground */
     position:absolute;
     top: 0vh; 
     background-size: cover;
-    
+
+    filter:brightness(200%) contrast(150%);
+
+    margin:auto;
+    overflow-x:hidden;
+
+
+    top: 0vh;
+
+
+
+    mask-image: linear-gradient(
+    90deg,
+    #0000 0%,
+    #ffff 40%,
+    #ffff 60%,
+    #0000 100%
+  );
+
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat no-repeat;
+  opacity: 20%;
   }
 
   #hero-background-lights.animation-toggle-enabled{
-    animation: light-pulse infinite 4s running;
+    mask-size: 200% 100%;
+    opacity: 70%;
+    animation: light-pulse-halo infinite 4s running;
+  }
+
+  #hero-foreground-lights
+  {
+    background-image: url("../assets/images/backgrounds/hero-image-foreground-lights-base.png");
+    background-repeat: no-repeat, no-repeat;
+    height: 100%;
+    width: 100%;
+    background-position: top;
+
+    z-index: 5; /* over hero background but under hero foreground */
+    position:absolute;
+    top: 0vh; 
+    background-size: cover;
+    filter:brightness(200%) contrast(150%);
+
+    margin:auto;
+    overflow-x:hidden;
+
+
+    top: 0vh;
+
+
+    
+    mask-image: linear-gradient(
+    90deg,
+    #0000 0%,
+    #ffff 50%,
+    #ffff 60%,
+    #0000 100%
+  );
+
+  opacity: 20%;
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat no-repeat;
+  }
+
+  #hero-foreground-lights.animation-toggle-enabled{
+    opacity: 40%;
+    mask-size: 200% 100%;
+    animation: light-pulse-halo infinite 4s running;
   }
 
   #hero-title-normal {
