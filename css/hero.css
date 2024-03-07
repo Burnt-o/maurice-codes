@@ -109,7 +109,7 @@
     display: block; 
     position: fixed;
     z-index: 4;
-    top: 15vh;
+    top: 15svh;
     margin:auto;
     width: 100%;
 
@@ -125,7 +125,7 @@
     display: block;
     position: fixed;
     z-index: 5;
-    top: 15vh;
+    top: 15svh;
     margin:auto;
     width: 100%;
 
@@ -163,32 +163,32 @@
 
   @media (orientation: portrait) {
     width: 80%;
-    top: 50vh;
+    top: 47svh;
     font-size: 4vw;
   }
   p{
     
   text-align: center;
 
-  width: 70%;  
+  width: 100%;  
 
-
+overflow-y: hidden;
 
   background-color: var(--color);
   font-family: "public-pixel", monospace;
   font-size: calc(1.5vh + 0.75vw);
   color:var(--hero-text);
-  top: 60vh;
-  position:absolute;
+  top: 60svh;
+  @media (orientation: portrait) {
+    top: 47svh;
+  }
+  position:relative;
+  float: left;
   z-index: 7;
   text-shadow: #000000 0 0 5px, #000000 0 0 5px;
 margin:auto;
 
-@media (orientation: portrait) {
-  width: 80%;
-  top: 50vh;
 
-}
 
   }
 
@@ -203,7 +203,7 @@ margin:auto;
   /* empty div so content after hero gets pushed down */
 #hero-spacer
 {
-  height:100vh;
+  height:100svh;
 }
 
 
