@@ -1,4 +1,4 @@
-#stickyHeader {
+@mixin stickyHeaderMixin {
   display: block; 
   position:fixed;
   top:0;

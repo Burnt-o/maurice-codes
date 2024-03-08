@@ -1,0 +1,322 @@
+@mixin projectInfoMixin{
+
+
+ 
+  $shadow-x-distance: 60px;
+  $shadow-y-distance: 40px;
+  $shadow-blur: 10px;
+  $shadow-color: #000000;
+  $bevel-background-alpha: 1.0;
+
+  $desktop-project-width: 60%;
+  $mobile-project-width: 95%;
+
+
+
+
+
+    --font-size-base: 1.3rem;
+    @media (orientation: portrait) {
+    --font-size-base: 1.3rem;
+    }
+
+    overflow-x:hidden;
+    padding-bottom: 15vh;
+
+  $section-intro-duration: 0.5s;
+
+
+
+  a{
+    /* content to center of screen*/
+    display: block;
+    text-align: center;
+    font-size: calc(var(--font-size-base) * 1);
+  }
+
+  .projectInfoWrapper
+  {
+    overflow:hidden; /* prevent internal animations expanding the browser window or pushing other stuff around*/
+  }
+
+  @keyframes expand-from-nothing
+  {
+    from {
+      transform: scaleX(0);
+      transform: scaleY(0);
+    }
+    to {
+      transform: scaleX(1);
+      transform: scaleY(1);
+    }
+  }
+
+  @keyframes animate-bevel-border {
+
+    0%{
+      background-position: -150vw 0;
+    }
+    
+    33%{
+      background-position: -100vw 0;
+    }
+
+    66%{
+      background-position: 50vw 0;
+    }
+
+    100%{
+      background-position: 150vw 0;
+    }
+
+
+  }
+
+  #HCM
+  {
+    padding-top: 15vh;
+  }
+
+  .beveled-background-container{
+    padding: 30px 10px 120px 0;
+    height: 100%;
+    width: 100%;
+
+
+  }
+
+  .beveled-background-container.animation-toggle-enabled{
+    filter:  drop-shadow(12vw 8vh 15px rgba(0,0,0,0.5));
+  }
+
+
+  .beveled-background-border, .beveled-background-inner{
+
+    clip-path: polygon(calc(100% - 10%) 0, 100% calc(10% * var(--child-aspect-ratio)), 100% 100%, 0 100%, 0 0);
+
+    // --aspect-ratio set by elementAspectRatioObserver.js 
+
+  /*
+  given width x
+
+  */
+
+  }
+
+  .beveled-background-border{
+    //background-color: rgb(0, 162, 255);
+
+    background: rgb(87, 170, 219);
+    background-size: 300vw 100%;
+    width: $desktop-project-width;
+    margin:auto;
+    padding: 2px 2px 2px 2px; // controls border thickness
+
+    @media (orientation: portrait) {
+      width: $mobile-project-width;
+    }
+
+  }
+
+  .beveled-background-border.animation-toggle-enabled{
+    // animate a cool glowing pulse effect in sync with the background lights
+
+    background: linear-gradient(90deg,rgb(0, 59, 93) 0%, rgb(129, 209, 255) 50%, rgb(0, 59, 93) 100%);
+    background-size: 300vw 100%;
+    animation-name: animate-bevel-border;
+    animation-duration: 4s;
+    animation-delay: -2.5s; 
+    animation-fill-mode:forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    }
+
+
+
+  .beveled-background-inner{
+    background: radial-gradient(circle, rgba(1,0,10,$bevel-background-alpha) 0%, rgba(26,26,41,$bevel-background-alpha) 44%, rgba(13,26,28,$bevel-background-alpha) 100%);
+
+  }
+
+
+  .projectInfo{
+    /* should auto expand to fill parent div*/
+  padding: 1vh 5vw 5vh 5vw;
+
+  @media (orientation: portrait) {
+    padding: 1vh 5vw 5vh 5vw;
+  }
+
+
+    h2 {
+      /* same as h1 with slightly smaller font */ 
+      text-align: center;
+      background-color: var(--color);
+      font-family: "public-pixel", monospace;
+      font-size: calc(var(--font-size-base) * 2);
+      padding: 16px;
+      padding-top: 40px;
+      padding-bottom: 0px;
+      margin: auto;
+      color:var(--title);
+      text-shadow: black 0 0 10px, black 0 0 5px;//, $shadow-color $shadow-x-distance $shadow-y-distance calc($shadow-blur + 5px);
+    }
+
+      
+    p {
+      /* align paragraph to the center of the screen*/
+      margin: auto;
+      margin-top: 0;
+      margin-bottom: 0.3em;
+      margin: auto;
+
+      text-align: left;
+
+      text-shadow: black 0 0 10px, black 0 0 5px;//, $shadow-color $shadow-x-distance $shadow-y-distance $shadow-blur;
+      color: var(--text);
+
+      /*increase line spacing slightly*/
+      line-height: 1.20;
+
+      font-size: var(--font-size-base); //
+      width: 80%;
+      padding-bottom: 2vh;
+      font-family: Tahoma, Verdana, Segoe, sans-serif;
+      @media (orientation: portrait) {
+        width: 95%;
+      }
+
+    }
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+  .tagContainer{
+    padding-bottom: 1vh;
+    width: 100%;
+    padding-left: 2vw; // TODO: need a better way to "justify" the tags
+    padding-top: 1vh;
+    margin:auto;
+      .tag{
+        padding: 2px 2px 2px 2px;
+        margin: 1px 1px 1px 1px;
+        border: 2px outset rgb(69, 52, 125);
+        // margin: 2px 2px 2px 2px;
+          display: inline-block;
+          color: rgb(255, 255, 255);
+          background-color: rgba(89, 63, 131, 1);
+          scroll-snap-align: start;
+          transform: scaleX(1);
+          transform: scaleY(1);
+          box-shadow: rgba(0, 0, 0, 0.5) 8px 8px $shadow-blur;
+          font-family: monaco, Consolas, Lucida Console, monospace;
+          font-size: calc(var(--font-size-base) * 0.7);
+          font-weight: 300% ;
+          text-shadow: 0 0 1px black;
+      }
+
+      .tag.animation-toggle-enabled{
+        transform: scaleX(0);
+        transform: scaleY(0);
+      }
+
+      .tag.has-been-visible.tag.animation-toggle-enabled
+      {
+
+        animation-name: expand-from-nothing;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      @for $i from 1 through 100 {
+        .tag:nth-child(#{$i})
+        {
+          $delay: ($section-intro-duration * 0.5) + ($i * 0.1 ) + (0.5 * random());
+          animation-delay: #{$delay};
+        }
+      }
+    
+  }
+
+
+
+  @keyframes slide-in-from-left
+  {
+    0% {
+      transform: translate(-100%, 0);
+    }
+
+    80%
+    {
+      transform: translate(+2%, 0);
+    }
+
+    100% {
+      transform: translate(0);
+    }
+  }
+
+  @keyframes slide-in-from-right
+  {
+    0% {
+      transform: translate(100%, 0);
+    }
+
+    80%
+    {
+      transform: translate(-2%, 0);
+    }
+
+    100% {
+      transform: translate(0);
+    }
+  }
+
+
+
+
+
+
+  /* alternate slide-in-from-left and slide-in-from-right for each project. Hide off screen when not visible. */
+  #HCM.has-been-visible.animation-toggle-enabled, #com.has-been-visible.animation-toggle-enabled{
+    animation: $section-intro-duration ease-in-out slide-in-from-left ;
+    transform: translate(0, 0);
+    }
+
+
+  #HCM.animation-toggle-enabled, #com.animation-toggle-enabled{
+    transform: translate(-100%, 0);
+    }
+
+  #CEER.has-been-visible.animation-toggle-enabled, #autosplitter.has-been-visible.animation-toggle-enabled{
+    animation: $section-intro-duration ease-in-out slide-in-from-right ;
+    transform: translate(0, 0);
+    }
+
+
+  #CEER.animation-toggle-enabled, #autosplitter.animation-toggle-enabled{
+    transform: translate(100%, 0);
+    }
+
+
+    
+    #HCM, #com{
+      transform: translate(0%, 0);
+      }
+
+    #CEER, #autosplitter{
+      transform: translate(0%, 0);
+      }
+
+  }

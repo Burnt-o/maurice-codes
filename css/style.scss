@@ -1,0 +1,188 @@
+@use "_preloader.scss" as preloaderMixin;
+@use "_stickyHeader.scss" as stickyHeaderMixin;
+@use "_hero.scss" as heroMixin;
+@use "_projectInfo.scss" as projectInfoMixin;
+@use "_contact.scss" as contactMixin;
+
+/* colour palette */ 
+:root, :root.dark {
+  --windowBackground: #2f3c48;
+  --windowBackgroundHighlight: #59171e;
+  --hero-text: rgb(252, 238, 223);;
+  --text: #f3e7db;
+  --text-disabled: #3d4a4a;
+  --hero-title: rgb(197, 74, 3);
+  --hero-title-highlight: #ff4b4b; 
+  --title: #ffcc66; 
+  --titleHighlight: #ff9940;
+  --testingHighlight: #e100ff;
+  --outside-color: rgba(23, 35, 53, 0.8);
+  --inside-color: rgba(61, 72, 96, 0.6);
+}
+
+
+ 
+html {
+  box-sizing: padding-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0px 0px 0px 0px;
+
+}
+
+.nav-anchor{
+  /*should be invisible*/
+  display:none; 
+}
+
+body{
+  background-color: rgb(46, 56, 85);
+
+}
+
+
+
+
+
+
+#hero-transition-wrapper {
+  position: absolute;
+  bottom: -2.5vh;
+  z-index: 6; /* must be above #content */
+  height: 3vh;
+  @media (orientation: portrait) {
+    height: 2vh;
+    bottom: -1.5vh;
+  }
+}
+
+#hero-transition {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.main{
+  width: 100%;
+}
+
+#content {
+  position: absolute;
+  z-index: 5; /* force above hero-title */
+  width: 100%;
+}
+
+#background-image {
+  background-image: url("../assets/images/backgrounds/background-vertically-tiling-minimal-2.png");
+  height: 101%; /* I don't know why but this is needed to get rid of background gap at bottom*/
+  width: 100%;
+  background-repeat: repeat-y;
+  background-size: cover;
+  z-index: -1; /* force below content */
+  position: absolute;
+  top: 0vh;
+}
+
+@keyframes light-pulse {
+  0% {
+    mask-position: 100vw;
+  }
+
+  100% {
+    mask-position: -100vw;
+  }
+}
+
+.background-lights {
+
+  background-image: url("../assets/images/backgrounds/background-vertically-tiling-lights-2.png");
+  opacity: 50%;
+  background-repeat: repeat-y;
+  background-size: cover;
+  position: relative;
+  top: 0vh;
+
+  height: 100%;
+  width: 100%;
+
+  mask-image: linear-gradient(
+    90deg,
+    #0000 0%,
+    #ffff 40%,
+    #ffff 60%,
+    #0000 100%
+  );
+
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat no-repeat;
+
+
+
+
+}
+.background-lights.animation-toggle-enabled{
+  animation: light-pulse infinite 4s running;
+  opacity: 100%;
+}
+
+
+.summary {
+  padding-top: 10vh;
+  height: 50vh;
+}
+
+
+
+a:link {
+  color: #fbb25d;
+}
+
+a:visited {
+  color: rgb(110, 110, 213);
+}
+
+a:hover {
+  color: rgb(180, 104, 255);
+}
+
+a:active {
+  color: rgb(255, 255, 255);
+}
+
+#anchorLink {
+  a,
+  a:hover,
+  a:visited,
+  a:active {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+}
+
+/* restrict css files to specific elements that use them */
+#preloader{
+  @include preloaderMixin.preloaderMixin();
+}
+
+#stickyHeader {
+  @include stickyHeaderMixin.stickyHeaderMixin();
+}
+
+#hero {
+  @include heroMixin.heroMixin();
+}
+
+#projects {
+  @include projectInfoMixin.projectInfoMixin();
+}
+
+#contactSection {
+  @include contactMixin.contactMixin();
+}
+
