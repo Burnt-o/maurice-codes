@@ -5,11 +5,10 @@
 Performance:
  * replace background images with smaller file size jpgs -> actually webp with jpg backup
 
-Fix zoom responsiveness by adjusting font (and project-info & contact containers & background images) to be based on parent container size instead of screen size
+Fix zoom responsiveness by adjusting font (and project-info & contact containers & background images) to be based on parent container size instead of screen size. EH DONE ENOUGH
 
-Cleanup global css by making them only included in html containers that should use them
 
-Minimalist design pass on hero image
+Minimalist design pass on hero image.EH DONE ENOUGH
 
 Fix home/contact anchor tags.
 
