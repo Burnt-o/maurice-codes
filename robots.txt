@@ -1,0 +1,3 @@
+# Disallow from crawling assets so my pi server doesn't get smashed
+User-agent: *
+Disallow: /assets/*
